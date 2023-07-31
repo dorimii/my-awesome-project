@@ -1,0 +1,9 @@
+autocorrect==2.6.1
+beautifulsoup4==4.12.2
+langchain==0.0.248
+matplotlib==3.7.2
+nltk==3.8.1
+pandas==1.4.3
+Requests==2.31.0
+tf_nightly_macos==2.13.0.dev20230418
+transformers==4.31.0
