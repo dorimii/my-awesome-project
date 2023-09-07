@@ -1,53 +1,22 @@
 import os
-import pandas as pd
-import matplotlib.pyplot as plt
-from transformers import GPT2TokenizerFast
-from langchain.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chains.question_answering import load_qa_chain
-from langchain.llms import OpenAI
-from langchain.chains import ConversationalRetrievalChain
-import requests
-import sys
+
 from bs4 import BeautifulSoup
-import nltk
-import tensorflow as tf
-from transformers import MarianMTModel, MarianTokenizer
-from autocorrect import Speller
+from langchain.llms import OpenAI
+import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 
+key = os.environ.get("OPENAI")
 
-url = "https://ia600203.us.archive.org/31/items/dieauslndische01espe/dieauslndische01espe_hocr.html"
+# url = "https://anno.onb.ac.at/cgi-content/annoshow?text=bbr|19000701|1"
+# response = requests.get(url)
 
-response = requests.get(url)
+# llm = OpenAI(temperature=0.9, openai_api_key=key, model_name="gpt-3.5-turbo-0613")
 
+# print(llm("Why do people prefer Mario over Luigi? In 10 words or fewer:"))
 
-# Check if the request was successful
-if response.status_code == 200:
-    # Get the content of the file
-    html_content = response.text
-    
-    # Parse the HTML content using BeautifulSoup
-    soup = BeautifulSoup(html_content, 'html.parser')
-    
-    # Find all "ocrx_word" elements
-    ocr_words = soup.find_all("span", class_="ocrx_word")
-    
-    # Extract and print the text content of each word
-    for word in ocr_words:
-        # Use 'utf-8' encoding to avoid UnicodeEncodeError
-        sys.stdout.buffer.write(word.text.encode('utf-8'))
-        sys.stdout.buffer.write(b' ')  # Add a space between words
-else:
-    print("Failed to download the file. Status code:", response.status_code)
-
-
-def uebersetze_alte_rechtschreibung(text):
-    spell = Speller(lang='de')
-    return spell(text)
-
-alte_rechtschreibung = "Dieses Haus ist ein sch\x94nes Beispiel daf\x94r, wie man fr\x9cher geschrieben hat."
-moderne_rechtschreibung = uebersetze_alte_rechtschreibung(alte_rechtschreibung)
-print(moderne_rechtschreibung)
+base_url = "https://anno.onb.ac.at/cgi-content/anno-plus?aid=bdv&datum=1900"
+response = requests.get(base_url)
+soup = BeautifulSoup(response.content, 'html.parser')
+print(soup)
