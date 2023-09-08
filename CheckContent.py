@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
-
+import string
 
 def fetchPage(url):
     response = requests.get(url)
@@ -36,40 +36,43 @@ def main():
     # Publication Level
     base_url = 'https://anno.onb.ac.at/cgi-content/anno-plus?aid=kse&datum=1900'
     soup = fetchPage(base_url)
-    #print(soup)
+    # print(soup)
 
     # Magazine Level
     magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
-    #print(magazine_links)
-    magazine_url = './anno-plus?aid=kse&datum=1900&pos=1&size=45'
-    combined_url = urljoin(base_url, magazine_url)
-    magazine_soup = fetchPage(combined_url)
-    #print(magazine_soup)
 
-    # Page Level
-    page_links = extractLinks(magazine_soup, ['page'])
-    test_page_url = './anno-plus?aid=kse&datum=1900&page=1&size=45'
-    combined_test_page_url = urljoin(combined_url, test_page_url)
-    test_page_soup = fetchPage(combined_test_page_url)
-    #print(test_page_soup)
-    test_page_links = extractLinks(test_page_soup, ['window.open(\'annoshow'])
-    print(test_page_links)
+    for magazine in magazine_links:
+        combined_url = urljoin(base_url, magazine)
+        magazine_soup = fetchPage(combined_url)
+        page_links = extractLinks(magazine_soup, ['page'])
+        for page in page_links:
+            page_url = page
+            # print(test_page_url)
+        #test_page_url = './anno-plus?aid=kse&datum=1900&page=1&size=45'
+            combined_page_url = urljoin(combined_url, page_url)
+            page_soup = fetchPage(combined_page_url)
+        #print(test_page_soup)
+            page_links = extractLinks(page_soup, ['window.open(\'annoshow'])
+        #print(test_page_links)
 
-    if test_page_links:
-        url = test_page_links[0]
-        pattern = r"window.open\('(.*?)',"
-        extracted_link = extractText(url, pattern)
-        # print(extracted_link)
+            if page_links:
+                url = page_links[0]
+                pattern = r"window.open\('(.*?)',"
+                extracted_link = extractText(url, pattern)
+                # print(extracted_link)
 
-        if extracted_link:
-            beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
-            new_text_url = urljoin(beginning_url_text, extracted_link)
-            text_soup = fetchPage(new_text_url)
-            #print(text_soup.get_text())
-        else:
-            print('No match found.')
-    else:
-        print('No text links found.')
+                if extracted_link:
+                    beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
+                    new_text_url = urljoin(beginning_url_text, extracted_link)
+                    text_soup = fetchPage(new_text_url)
+                    text = text_soup.get_text()
+                    printable_text = ''.join(char for char in text if char in string.printable)
+                    # print(printable_text)
+                else:
+                    print('No match found.')
+            else:
+                print('No text links found.')
+        print("\nNEWMAGAZIINE\n")
 
 
 if __name__ == "__main__":
