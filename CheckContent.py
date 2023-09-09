@@ -4,6 +4,10 @@ from urllib.parse import urljoin
 import re
 import string
 
+ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
+ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
+
+
 def fetchPage(url):
     response = requests.get(url)
     return BeautifulSoup(response.text, 'html.parser')
@@ -18,7 +22,7 @@ def extractLinks(soup, conditions):
             for condition in conditions:
                 if condition not in href:
                     bool_conditions = False
-                    break 
+                    break
             if bool_conditions:
                 extracted_links.append(href)
     return extracted_links
@@ -32,28 +36,37 @@ def extractText(text_url, pattern):
         return None
 
 
-def main():
-    # Publication Level
-    base_url = 'https://anno.onb.ac.at/cgi-content/anno-plus?aid=kse&datum=1900'
-    soup = fetchPage(base_url)
-    # print(soup)
+def scrapeTextAndSave(mode, url):
+
+    soup = fetchPage(url)
+    #print(soup)
 
     # Magazine Level
-    magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
+    if mode == ZEITSCHRIFT_BASE_URL:
+        magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
+        if len(magazine_links) == 0:  # No publications found for 1900 (current link structure demands the year 1900)
+            return
+        raw_publication_title = soup.title.string.strip()
+        prefix = "ÖNB-ANNO - "
+        # Replace the substring with an empty string
+        publication_title = raw_publication_title.replace(prefix, "")
+
+    else:
+        magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])  # TODO
 
     for magazine in magazine_links:
-        combined_url = urljoin(base_url, magazine)
+        combined_url = urljoin(url, magazine)
         magazine_soup = fetchPage(combined_url)
         page_links = extractLinks(magazine_soup, ['page'])
         for page in page_links:
             page_url = page
             # print(test_page_url)
-        #test_page_url = './anno-plus?aid=kse&datum=1900&page=1&size=45'
+            # test_page_url = './anno-plus?aid=kse&datum=1900&page=1&size=45'
             combined_page_url = urljoin(combined_url, page_url)
             page_soup = fetchPage(combined_page_url)
-        #print(test_page_soup)
+            # print(page_soup)
             page_links = extractLinks(page_soup, ['window.open(\'annoshow'])
-        #print(test_page_links)
+            # print(page_links)
 
             if page_links:
                 url = page_links[0]
@@ -67,12 +80,24 @@ def main():
                     text_soup = fetchPage(new_text_url)
                     text = text_soup.get_text()
                     printable_text = ''.join(char for char in text if char in string.printable)
-                    # print(printable_text)
+                    print(printable_text)
                 else:
                     print('No match found.')
             else:
                 print('No text links found.')
-        print("\nNEWMAGAZIINE\n")
+        print("\nNEXT MAGAZINE\n")
+
+
+def main():
+    with open('validstubs.txt', 'r') as file:
+        # Publication Level
+        #for line in file:
+        line = file.readline().strip()
+
+        if "anno-plus" in line:
+            scrapeTextAndSave(ZEITSCHRIFT_BASE_URL, line)
+        else:
+            scrapeTextAndSave(ZEITUNG_BASE_URL, line)
 
 
 if __name__ == "__main__":
