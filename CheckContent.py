@@ -37,23 +37,24 @@ def extractText(text_url, pattern):
 
 
 def scrapeTextAndSave(mode, url):
-
     soup = fetchPage(url)
-    #print(soup)
+    # print(soup)
 
-    # Magazine Level
+    # Cleaning up and filtering data before scraping individual editions
     if mode == ZEITSCHRIFT_BASE_URL:
         magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
         if len(magazine_links) == 0:  # No publications found for 1900 (current link structure demands the year 1900)
             return
+        # Eventually we want to create folders automatically named after the publication,
+        # we can later use publication_title for this
         raw_publication_title = soup.title.string.strip()
         prefix = "ÖNB-ANNO - "
-        # Replace the substring with an empty string
         publication_title = raw_publication_title.replace(prefix, "")
 
     else:
         magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])  # TODO
 
+    # Magazine Level
     for magazine in magazine_links:
         combined_url = urljoin(url, magazine)
         magazine_soup = fetchPage(combined_url)
@@ -91,9 +92,9 @@ def scrapeTextAndSave(mode, url):
 def main():
     with open('validstubs.txt', 'r') as file:
         # Publication Level
-        #for line in file:
+        # for line in file:   When everything else is ready, we can loop through each magazine stub like this
         line = file.readline().strip()
-
+        # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
             scrapeTextAndSave(ZEITSCHRIFT_BASE_URL, line)
         else:
