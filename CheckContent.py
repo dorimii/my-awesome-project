@@ -110,6 +110,7 @@ def scrapeTextAndSave(mode, url):
         magazine_soup = fetchPage(combined_url)
         page_links = extractLinks(magazine_soup, ['page'])
 
+        # Page Level
         for index, page in enumerate(page_links):
             page_url = page
 
@@ -120,22 +121,21 @@ def scrapeTextAndSave(mode, url):
 
             if text_links:
                 text_url = text_links[0]
-            pattern = r"window.open('(.*?)',"
-            extracted_text_link = extractText(text_url, pattern)
-            print(extracted_text_link)
+                pattern = r"window.open\('(.*?)',"
+                extracted_text_link = extractText(text_url, pattern)
 
-            if extracted_text_link:
-                beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
-            new_text_url = urljoin(beginning_url_text, extracted_text_link)
-            text_soup = fetchPage(new_text_url)
-            text = text_soup.get_text()
-            printable_text = ''.join(char for char in text if char in string.printable)
-            # print(printable_text)
-            if mode == ZEITSCHRIFT_BASE_URL:
-                publication_mode = "Zeitschrift"
-            else:
-                publication_mode = "Zeitung"
-            # saveToFile(publication_mode, publication_title, index + 1, text)
+                if extracted_text_link:
+                    beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
+                    new_text_url = urljoin(beginning_url_text, extracted_text_link)
+                    text_soup = fetchPage(new_text_url)
+                    text = text_soup.get_text()
+                    printable_text = ''.join(char for char in text if char in string.printable)
+                    print(printable_text)
+                    if mode == ZEITSCHRIFT_BASE_URL:
+                        publication_mode = "Zeitschrift"
+                    else:
+                        publication_mode = "Zeitung"
+                    # saveToFile(publication_mode, publication_title, index + 1, text)
 
         print("\nNEXT MAGAZINE\n")
 
