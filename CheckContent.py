@@ -11,7 +11,7 @@ ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
 
 
 def fetchPage(url):
-    #print(url)
+    # print(url)
     response = requests.get(url)
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -102,13 +102,18 @@ def scrapeTextAndSave(mode, url):
 
     year_soup = fetchPage(year_url)
     year_magazine_links = getLinks(mode, year_soup)
+    # print(year_magazine_links)
 
     # Magazine Level
     for magazine in year_magazine_links:
         combined_url = urljoin(year_url, magazine)
-
+        # print(combined_url)
         magazine_soup = fetchPage(combined_url)
-        page_links = extractLinks(magazine_soup, ['page'])
+        if mode == ZEITSCHRIFT_BASE_URL:
+            page_links = extractLinks(magazine_soup, ['page'])
+        else:
+            page_links = extractLinks(magazine_soup, ['seite'])
+        #print(page_links)
 
         # Page Level
         for index, page in enumerate(page_links):
@@ -117,16 +122,21 @@ def scrapeTextAndSave(mode, url):
             combined_page_url = urljoin(combined_url, page_url)
             page_soup = fetchPage(combined_page_url)
 
-            text_links = extractLinks(page_soup, ['window.open(\'annoshow'])
+            if mode == ZEITSCHRIFT_BASE_URL:
+                text_links = extractLinks(page_soup, ['window.open(\'annoshow'])
+            else:
+                text_links = extractLinks(page_soup, ['window.open(\'/cgi-content/annoshow'])
 
             if text_links:
                 text_url = text_links[0]
                 pattern = r"window.open\('(.*?)',"
                 extracted_text_link = extractText(text_url, pattern)
 
+
                 if extracted_text_link:
                     beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
                     new_text_url = urljoin(beginning_url_text, extracted_text_link)
+                    # print(new_text_url)
                     text_soup = fetchPage(new_text_url)
                     text = text_soup.get_text()
                     printable_text = ''.join(char for char in text if char in string.printable)
@@ -135,7 +145,7 @@ def scrapeTextAndSave(mode, url):
                         publication_mode = "Zeitschrift"
                     else:
                         publication_mode = "Zeitung"
-                    # saveToFile(publication_mode, publication_title, index + 1, text)
+                    saveToFile(publication_mode, publication_title, index + 1, text)
 
         print("\nNEXT MAGAZINE\n")
 
@@ -144,7 +154,8 @@ def main():
     with open('validstubs.txt', 'r') as file:
         # Publication Level
         # for line in file:   When everything else is ready, we can loop through each magazine stub like this
-        line = file.readline().strip()
+        # line = file.readline().strip()
+        line = "https://anno.onb.ac.at/cgi-content/anno?aid=aog"
         # sehr hübsche Lösung babe, ich bin entzückt <3
         # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
