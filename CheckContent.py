@@ -41,7 +41,9 @@ def filterMagazines(magazine_links):
     if len(magazine_links) == 0:  # No publications found
         return
     # This is how we only get publications from 1890 to 1920
+    print(magazine_links)
     filtered_links = [link for link in magazine_links if any(str(year) in link for year in range(1889, 1921))]
+    print(filtered_links)
 
     return filtered_links
 
@@ -74,7 +76,7 @@ def scrapeTextAndSave(mode, url):
     #print(publication_title)
 
     # Magazine Level
-    for magazine in magazine_links:
+    for magazine in filtered_links:
         combined_url = urljoin(url, magazine)
         magazine_soup = fetchPage(combined_url)
         page_links = extractLinks(magazine_soup, ['page'])
