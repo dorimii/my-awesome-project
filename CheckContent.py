@@ -44,17 +44,25 @@ def scrapeTextAndSave(mode, url):
     # Cleaning up and filtering data before scraping individual editions
     if mode == ZEITSCHRIFT_BASE_URL:
         magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
-        print("Links", magazine_links)
         if len(magazine_links) == 0:  # No publications found for 1900 (current link structure demands the year 1900)
+            print("EMPTY")
             return
         # Eventually we want to create folders automatically named after the publication,
         # we can later use publication_title for this
         raw_publication_title = soup.title.string.strip()
+        print(raw_publication_title)
         prefix = "ÖNB-ANNO - "
         publication_title = raw_publication_title.replace(prefix, "")
 
     else:
-        magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])  # TODO
+        magazine_links = extractLinks(soup, ['anno?', '&datum'])
+        if len(magazine_links) == 0: 
+            print("EMPTY") # No publications found for 1900 (current link structure demands the year 1900)
+            return
+        raw_publication_title = soup.title.string.strip()
+        print(raw_publication_title)
+        prefix = "ANNO-"
+        publication_title = raw_publication_title.replace(prefix, "")
     # Magazine Level
     for magazine in magazine_links:
         combined_url = urljoin(url, magazine)
@@ -82,7 +90,7 @@ def scrapeTextAndSave(mode, url):
                     text_soup = fetchPage(new_text_url)
                     text = text_soup.get_text()
                     printable_text = ''.join(char for char in text if char in string.printable)
-                    print(printable_text)
+                    # print(printable_text)
                 else:
                     print('No match found.')
                     break
@@ -100,8 +108,10 @@ def main():
         # sehr hübsche Lösung babe, ich bin entzückt <3
         # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
+            print("Zeitschrift")
             scrapeTextAndSave(ZEITSCHRIFT_BASE_URL, line)
         else:
+            print("Zeitung")
             scrapeTextAndSave(ZEITUNG_BASE_URL, line)
 
 
