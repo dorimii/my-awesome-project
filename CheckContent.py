@@ -37,32 +37,42 @@ def extractText(text_url, pattern):
         return None
 
 
+def filterMagazines(magazine_links):
+    if len(magazine_links) == 0:  # No publications found
+        return
+    # This is how we only get publications from 1890 to 1920
+    filtered_links = [link for link in magazine_links if any(str(year) in link for year in range(1889, 1921))]
+
+    return filtered_links
+
+
+def getPublicationTitle(soup, mode):
+
+    raw_publication_title = soup.title.string.strip()
+    if mode == ZEITSCHRIFT_BASE_URL:
+        prefix = "ÖNB-ANNO - "
+    else:
+        prefix = "ANNO-"
+
+    publication_title = raw_publication_title.replace(prefix, "")
+    return publication_title
+
+
 def scrapeTextAndSave(mode, url):
     soup = fetchPage(url)
-    # print(soup)
 
     # Cleaning up and filtering data before scraping individual editions
     if mode == ZEITSCHRIFT_BASE_URL:
         magazine_links = extractLinks(soup, ['anno-plus?', '&datum'])
-        if len(magazine_links) == 0:  # No publications found for 1900 (current link structure demands the year 1900)
-            print("EMPTY")
-            return
-        # Eventually we want to create folders automatically named after the publication,
-        # we can later use publication_title for this
-        raw_publication_title = soup.title.string.strip()
-        print(raw_publication_title)
-        prefix = "ÖNB-ANNO - "
-        publication_title = raw_publication_title.replace(prefix, "")
 
     else:
         magazine_links = extractLinks(soup, ['anno?', '&datum'])
-        if len(magazine_links) == 0: 
-            print("EMPTY") # No publications found for 1900 (current link structure demands the year 1900)
-            return
-        raw_publication_title = soup.title.string.strip()
-        print(raw_publication_title)
-        prefix = "ANNO-"
-        publication_title = raw_publication_title.replace(prefix, "")
+
+    filtered_links = filterMagazines(magazine_links)
+    publication_title = getPublicationTitle(soup, mode)
+    #print(filtered_links)
+    #print(publication_title)
+
     # Magazine Level
     for magazine in magazine_links:
         combined_url = urljoin(url, magazine)
@@ -108,10 +118,8 @@ def main():
         # sehr hübsche Lösung babe, ich bin entzückt <3
         # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
-            print("Zeitschrift")
             scrapeTextAndSave(ZEITSCHRIFT_BASE_URL, line)
         else:
-            print("Zeitung")
             scrapeTextAndSave(ZEITUNG_BASE_URL, line)
 
 
