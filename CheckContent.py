@@ -44,18 +44,18 @@ def filterMagazinesByYearRange(magazine_links):
     # This is how we only get publications from 1890 to 1920
     filtered_links = [link for link in magazine_links if any(str(year) in link for year in range(1889, 1921))]
 
-    # TODO: There's a "nicht erschienen" class for years that have valid links but no actual data. Filter dem shits :)
-
     return filtered_links
 
 
 def saveToFile(year, publication_mode, magazine_name, edition, text):
     directory_name = "ANNO"
-    directory = os.path.join(directory_name, publication_mode, magazine_name, year, str(edition))
+    directory = os.path.join(directory_name, publication_mode, magazine_name, year)
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    with open(os.path.join(directory, "text.txt"), "w", encoding='utf-8') as file:
+    file_name = magazine_name + year + edition
+
+    with open(os.path.join(directory, file_name), "w", encoding='utf-8') as file:
         file.write(text)
 
 
@@ -79,6 +79,15 @@ def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung
         magazine_links = extractLinks(soup, content_zeitung)
 
     return magazine_links
+
+
+def getEditionNames(mode, magazine_soup):
+    if mode == ZEITSCHRIFT_BASE_URL:
+        edition = magazine_soup.find('h1').text
+    else:
+        edition = magazine_soup.find('h2').text
+
+    return edition
 
 
 def scrapeTextAndSave(mode, url):
@@ -108,6 +117,12 @@ def scrapeTextAndSave(mode, url):
     for index, magazine in enumerate(year_magazine_links):
         combined_url = urljoin(year_url, magazine)
         magazine_soup = fetchPage(combined_url)
+        #print(magazine_soup)
+
+        edition = getEditionNames(mode, magazine_soup)
+        edition = edition.replace(" ", "")
+        edition = edition.replace("/", "")
+
         text = []
 
         page_links = getDiffPublicationModeLinks(mode, magazine_soup, ['page'], ['seite'])
@@ -140,10 +155,12 @@ def scrapeTextAndSave(mode, url):
         magazine_text = "".join(text)
 
         if mode == ZEITSCHRIFT_BASE_URL:
-            publication_mode = "Zeitschrift"
+            publication_mode = "Zeitschriften"
+
         else:
-            publication_mode = "Zeitung"
-        saveToFile(year, publication_mode, publication_title, index + 1, magazine_text)
+            publication_mode = "Zeitungen"
+
+        saveToFile(year, publication_mode, publication_title, edition, magazine_text)
 
         print("\nNEXT MAGAZINE\n")
 
