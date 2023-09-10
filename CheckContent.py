@@ -11,7 +11,6 @@ ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
 
 
 def fetchPage(url):
-    # print(url)
     response = requests.get(url)
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -50,9 +49,9 @@ def filterMagazinesByYearRange(magazine_links):
     return filtered_links
 
 
-def saveToFile(publication_mode, magazine_name, page, text):
-    directory_name = "1900"
-    directory = os.path.join(directory_name, publication_mode, magazine_name, str(page))
+def saveToFile(year, publication_mode, magazine_name, edition, text):
+    directory_name = "ANNO"
+    directory = os.path.join(directory_name, publication_mode, magazine_name, year, str(edition))
     if not os.path.exists(directory):
         os.makedirs(directory)
 
@@ -61,7 +60,6 @@ def saveToFile(publication_mode, magazine_name, page, text):
 
 
 def getPublicationTitle(soup, mode):
-
     raw_publication_title = soup.title.string.strip()
     if mode == ZEITSCHRIFT_BASE_URL:
         prefix = "ÖNB-ANNO - "
@@ -84,7 +82,6 @@ def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung
 
 
 def scrapeTextAndSave(mode, url):
-
     soup = fetchPage(url)
 
     publication_title = getPublicationTitle(soup, mode)
@@ -101,22 +98,22 @@ def scrapeTextAndSave(mode, url):
     year_index = filtered_links.index(next(link for link in filtered_links if "1900" in link))
     year_link = filtered_links[year_index]
     year_url = urljoin(ANNO_URL, year_link)
+    year = "1900"  # TODO get year from year array
     print(year_url)
 
     year_soup = fetchPage(year_url)
     year_magazine_links = getDiffPublicationModeLinks(mode, year_soup, ['anno-plus?', '&datum'], ['anno?', '&datum'])
 
     # Magazine Level
-    for magazine in year_magazine_links:
+    for index, magazine in enumerate(year_magazine_links):
         combined_url = urljoin(year_url, magazine)
-        # print(combined_url)
         magazine_soup = fetchPage(combined_url)
+        text = []
 
         page_links = getDiffPublicationModeLinks(mode, magazine_soup, ['page'], ['seite'])
-        #print(page_links)
 
         # Page Level
-        for index, page in enumerate(page_links):
+        for page in page_links:
             page_url = page
 
             combined_page_url = urljoin(combined_url, page_url)
@@ -133,17 +130,20 @@ def scrapeTextAndSave(mode, url):
                 if extracted_text_link:
                     beginning_url_text = 'https://anno.onb.ac.at/cgi-content/'
                     new_text_url = urljoin(beginning_url_text, extracted_text_link)
-                    # print(new_text_url)
-                    text_soup = fetchPage(new_text_url)
-                    text = text_soup.get_text()
-                    printable_text = ''.join(char for char in text if char in string.printable)
-                    print(printable_text)
 
-                    if mode == ZEITSCHRIFT_BASE_URL:
-                        publication_mode = "Zeitschrift"
-                    else:
-                        publication_mode = "Zeitung"
-                    saveToFile(publication_mode, publication_title, index + 1, text)
+                    text_soup = fetchPage(new_text_url)
+                    page_text = text_soup.get_text()
+                    text.append(page_text)
+                    # printable_text = ''.join(char for char in text if char in string.printable)
+                    # print(printable_text)
+
+        magazine_text = "".join(text)
+
+        if mode == ZEITSCHRIFT_BASE_URL:
+            publication_mode = "Zeitschrift"
+        else:
+            publication_mode = "Zeitung"
+        saveToFile(year, publication_mode, publication_title, index + 1, magazine_text)
 
         print("\nNEXT MAGAZINE\n")
 
