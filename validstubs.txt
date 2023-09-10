@@ -1,5 +1,5 @@
-https://anno.onb.ac.at/cgi-content/anno-plus?aid=abg
 https://anno.onb.ac.at/cgi-content/anno?aid=gtb
+https://anno.onb.ac.at/cgi-content/anno-plus?aid=abg
 https://anno.onb.ac.at/cgi-content/anno-plus?aid=aap
 https://anno.onb.ac.at/cgi-content/anno-plus?aid=abz
 https://anno.onb.ac.at/cgi-content/anno-plus?aid=afg
