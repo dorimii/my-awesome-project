@@ -85,7 +85,8 @@ def getEditionNames(mode, magazine_soup):
     if mode == ZEITSCHRIFT_BASE_URL:
         edition = magazine_soup.find('h1').text
     else:
-        edition = magazine_soup.find('h2').text
+        edition = magazine_soup.find('h2').text  # TODO: Not correct, actually, whoops
+    print(edition)
 
     return edition
 
