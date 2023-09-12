@@ -68,6 +68,7 @@ def getPublicationTitle(soup, mode):
         prefix = "ANNO-"
 
     publication_title = raw_publication_title.replace(prefix, "")
+    publication_title = publication_title.replace(" ", "_") # maybe better like that
     return publication_title
 
 
@@ -86,13 +87,15 @@ def getEditionNames(mode, magazine_soup):
     if mode == ZEITSCHRIFT_BASE_URL:
         h1 = magazine_soup.find('h1').text
         h1_without_year = h1.split(": ")
-        h1_replace = h1_without_year[-1].replace(" ", "") # before we had the year in the title twice
+        h1_replace = h1_without_year[-1].replace(" ", "") # we had the year in the title twice before - we could also just remove the year
         edition = h1_replace.replace(":", "") 
     else:
         #print(magazine_soup)
         soup_title = magazine_soup.find('title').text  # edition is now publication date
         title_parts = soup_title.split(", ")
         edition = title_parts[-1]
+        edition = edition.split("-")
+        edition = "-" + "-".join(edition[1:]) # unfortunately rather ugly, might fix later
 
     return edition
 
@@ -177,7 +180,7 @@ def main():
         # Publication Level
         # for line in file:   When everything else is ready, we can loop through each magazine stub like this
         line = file.readline().strip()
-        print(line)
+        line = "https://anno.onb.ac.at/cgi-content/anno?aid=anz"
         # sehr hübsche Lösung babe, ich bin entzückt <3
         # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
