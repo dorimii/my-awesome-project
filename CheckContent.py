@@ -60,6 +60,7 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
 
 
 def getPublicationTitle(soup, mode):
+    # print(soup.encode('utf-8'))
     raw_publication_title = soup.title.string.strip()
     if mode == ZEITSCHRIFT_BASE_URL:
         prefix = "ÖNB-ANNO - "
@@ -83,10 +84,15 @@ def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung
 
 def getEditionNames(mode, magazine_soup):
     if mode == ZEITSCHRIFT_BASE_URL:
-        edition = magazine_soup.find('h1').text
+        h1 = magazine_soup.find('h1').text
+        h1_without_year = h1.split(": ")
+        h1_replace = h1_without_year[-1].replace(" ", "") # before we had the year in the title twice
+        edition = h1_replace.replace(":", "") 
     else:
-        edition = magazine_soup.find('h2').text  # TODO: Not correct, actually, whoops
-    print(edition)
+        #print(magazine_soup)
+        soup_title = magazine_soup.find('title').text  # edition is now publication date
+        title_parts = soup_title.split(", ")
+        edition = title_parts[-1]
 
     return edition
 
@@ -171,6 +177,7 @@ def main():
         # Publication Level
         # for line in file:   When everything else is ready, we can loop through each magazine stub like this
         line = file.readline().strip()
+        print(line)
         # sehr hübsche Lösung babe, ich bin entzückt <3
         # At the moment, we only read the first line in validstubs.txt
         if "anno-plus" in line:
