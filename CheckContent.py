@@ -3,10 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
-import string
+import threading
+import queue
 
-ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
-ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
+MODE_ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
+MODE_ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
 ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
 
 
@@ -53,28 +54,31 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    file_name = magazine_name + year + edition
+    file_name = year + edition
 
     with open(os.path.join(directory, file_name), "w", encoding='utf-8') as file:
         file.write(text)
+
+    print(magazine_name + year + edition)
 
 
 def getPublicationTitle(soup, mode):
     # print(soup.encode('utf-8'))
     raw_publication_title = soup.title.string.strip()
-    if mode == ZEITSCHRIFT_BASE_URL:
+    if mode == MODE_ZEITSCHRIFT_BASE_URL:
         prefix = "ÖNB-ANNO - "
     else:
         prefix = "ANNO-"
 
     publication_title = raw_publication_title.replace(prefix, "")
     publication_title = publication_title.replace(" ", "_") # maybe better like that
+    publication_title = publication_title.replace("/", "_")  # maybe better like that
     return publication_title
 
 
 def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung):
     # Again different based on the two datasets
-    if mode == ZEITSCHRIFT_BASE_URL:
+    if mode == MODE_ZEITSCHRIFT_BASE_URL:
         magazine_links = extractLinks(soup, content_zeitschrift)
 
     else:
@@ -84,7 +88,7 @@ def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung
 
 
 def getEditionNames(mode, magazine_soup):
-    if mode == ZEITSCHRIFT_BASE_URL:
+    if mode == MODE_ZEITSCHRIFT_BASE_URL:
         h1 = magazine_soup.find('h1').text
         h1_without_year = h1.split(": ")
         h1_replace = h1_without_year[-1].replace(" ", "") # we had the year in the title twice before - we could also just remove the year
@@ -127,7 +131,6 @@ def scrapeTextAndSave(mode, url):
     for index, magazine in enumerate(year_magazine_links):
         combined_url = urljoin(year_url, magazine)
         magazine_soup = fetchPage(combined_url)
-        #print(magazine_soup)
 
         edition = getEditionNames(mode, magazine_soup)
         edition = edition.replace(" ", "")
@@ -164,7 +167,7 @@ def scrapeTextAndSave(mode, url):
 
         magazine_text = "".join(text)
 
-        if mode == ZEITSCHRIFT_BASE_URL:
+        if mode == MODE_ZEITSCHRIFT_BASE_URL:
             publication_mode = "Zeitschriften"
 
         else:
@@ -172,21 +175,42 @@ def scrapeTextAndSave(mode, url):
 
         saveToFile(year, publication_mode, publication_title, edition, magazine_text)
 
-        print("\nNEXT MAGAZINE\n")
+
+# Worker function for each thread
+def worker(publications_queue):
+    while not publications_queue.empty():
+        try:
+            # Get an argument from the queue
+            url = publications_queue.get_nowait()
+        except queue.Empty:
+            return
+
+        # Call the sample function with the argument
+        if "anno-plus" in url:
+            scrapeTextAndSave(MODE_ZEITSCHRIFT_BASE_URL, url)
+        else:
+            scrapeTextAndSave(MODE_ZEITUNG_BASE_URL, url)
 
 
 def main():
-    with open('validstubs.txt', 'r') as file:
-        # Publication Level
-        # for line in file:   When everything else is ready, we can loop through each magazine stub like this
-        line = file.readline().strip()
-        line = "https://anno.onb.ac.at/cgi-content/anno?aid=anz"
+    publications_queue = queue.Queue()
+
+    # Publication Level
+    with open('validstubsshort.txt', 'r') as file:
+        for line in file:
+            # Load all previously scraped urls into a queue for threads to scrape their content
+            url = line.strip()
+            publications_queue.put(url)
+
         # sehr hübsche Lösung babe, ich bin entzückt <3
-        # At the moment, we only read the first line in validstubs.txt
-        if "anno-plus" in line:
-            scrapeTextAndSave(ZEITSCHRIFT_BASE_URL, line)
-        else:
-            scrapeTextAndSave(ZEITUNG_BASE_URL, line)
+        threads = []
+        for i in range(5):
+            thread = threading.Thread(target=worker, args=(publications_queue,))
+            thread.start()
+            threads.append(thread)
+
+        for thread in threads:
+            thread.join()
 
 
 if __name__ == "__main__":
