@@ -1,3 +1,4 @@
+import csv
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -9,6 +10,20 @@ import queue
 MODE_ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
 MODE_ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
 ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
+
+
+def notTrefferLog(type, publication_name):
+
+    with open("NotTrefferLogs.csv", 'a', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        if type == "NoEditionForYear":
+            row = [publication_name, "", ""]
+        if type == "NoLinkForYear":
+            row = ["", publication_name, ""]
+        if type == "NoEditionName":
+            row = ["", "", publication_name]
+
+        csv_writer.writerow(row)
 
 
 def fetchPage(url):
@@ -63,7 +78,7 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
 
 
 def getPublicationTitle(soup, mode):
-    # print(soup.encode('utf-8'))
+
     raw_publication_title = soup.title.string.strip()
     if mode == MODE_ZEITSCHRIFT_BASE_URL:
         prefix = "ÖNB-ANNO - "
@@ -87,19 +102,29 @@ def getDiffPublicationModeLinks(mode, soup, content_zeitschrift, content_zeitung
     return magazine_links
 
 
-def getEditionNames(mode, magazine_soup):
+def getEditionNames(mode, magazine_soup, publication_title):
+    global exception_counter
+
     if mode == MODE_ZEITSCHRIFT_BASE_URL:
-        h1 = magazine_soup.find('h1').text
-        h1_without_year = h1.split(": ")
-        h1_replace = h1_without_year[-1].replace(" ", "") # we had the year in the title twice before - we could also just remove the year
-        edition = h1_replace.replace(":", "") 
+        try:
+            h1 = magazine_soup.find('h1').text
+            h1_without_year = h1.split(": ")
+            h1_replace = h1_without_year[-1].replace(" ", "") # we had the year in the title twice before - we could also just remove the year
+            edition = h1_replace.replace(":", "")
+        except Exception:
+            notTrefferLog("NoEditionName", publication_title)
+            return
     else:
-        #print(magazine_soup)
-        soup_title = magazine_soup.find('title').text  # edition is now publication date
-        title_parts = soup_title.split(", ")
-        edition = title_parts[-1]
-        edition = edition.split("-")
-        edition = "-" + "-".join(edition[1:]) # unfortunately rather ugly, might fix later
+        try:
+            soup_title = magazine_soup.find('title').text  # edition is now publication date
+            title_parts = soup_title.split(", ")
+            edition = title_parts[-1]
+            edition = edition.split("-")
+            edition = "-" + "-".join(edition[1:]) # unfortunately rather ugly, might fix later
+
+        except Exception:
+            notTrefferLog("NoEditionName", publication_title)
+            return
 
     return edition
 
@@ -114,15 +139,20 @@ def scrapeTextAndSave(mode, url):
     filtered_links = filterMagazinesByYearRange(magazine_links)
 
     if len(filtered_links) == 0:  # No publications found
-        print("Dis empty!")
+        notTrefferLog("NoEditionForYear", publication_title)
         return
 
     # Eventually, we'll loop thru all years in the YearRange, but for now we stay in 1900
-    year_index = filtered_links.index(next(link for link in filtered_links if "1900" in link))
+    try:
+        year_index = filtered_links.index(next(link for link in filtered_links if "1900" in link))
+    except Exception:
+        notTrefferLog("NoLinkForYear", publication_title)
+        return
+
     year_link = filtered_links[year_index]
     year_url = urljoin(ANNO_URL, year_link)
     year = "1900"  # TODO get year from year array
-    print(year_url)
+    #print(year_url)
 
     year_soup = fetchPage(year_url)
     year_magazine_links = getDiffPublicationModeLinks(mode, year_soup, ['anno-plus?', '&datum'], ['anno?', '&datum'])
@@ -132,7 +162,9 @@ def scrapeTextAndSave(mode, url):
         combined_url = urljoin(year_url, magazine)
         magazine_soup = fetchPage(combined_url)
 
-        edition = getEditionNames(mode, magazine_soup)
+        edition = getEditionNames(mode, magazine_soup, publication_title)
+        if not edition:
+            return
         edition = edition.replace(" ", "")
         edition = edition.replace("/", "")
 
@@ -162,8 +194,6 @@ def scrapeTextAndSave(mode, url):
                     text_soup = fetchPage(new_text_url)
                     page_text = text_soup.get_text()
                     text.append(page_text)
-                    # printable_text = ''.join(char for char in text if char in string.printable)
-                    # print(printable_text)
 
         magazine_text = "".join(text)
 
