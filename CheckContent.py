@@ -77,9 +77,8 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
     print(magazine_name + year + edition)
 
 
-def getPublicationTitle(soup, mode):
+def getPublicationTitle(raw_publication_title, mode):
 
-    raw_publication_title = soup.title.string.strip()
     if mode == MODE_ZEITSCHRIFT_BASE_URL:
         prefix = "ÖNB-ANNO - "
     else:
@@ -130,15 +129,28 @@ def getEditionNames(mode, magazine_soup, publication_title):
 
 
 def scrapeTextAndSave(mode, url):
-    soup = fetchPage(url)
 
-    publication_title = getPublicationTitle(soup, mode)
+    try:
+        soup = fetchPage(url)
+    except Exception:
+        notTrefferLog("NoLinkForYear", url)
+        return
+
+    if soup is None:  # Empty URL, shouldn't happen but betta 2 b safe
+        return
+    else:
+        try:
+            soup_title = soup.title.string.strip()  # No title tag usually means publication is just a pamphlet
+        except Exception:
+            return
+
+    publication_title = getPublicationTitle(soup_title, mode)
 
     magazine_links = getDiffPublicationModeLinks(mode, soup, ['anno-plus?', '&datum'], ['anno?', '&datum'])
 
     filtered_links = filterMagazinesByYearRange(magazine_links)
 
-    if len(filtered_links) == 0:  # No publications found
+    if filtered_links is None:  # No publications found
         notTrefferLog("NoEditionForYear", publication_title)
         return
 
@@ -234,7 +246,7 @@ def main():
 
         # sehr hübsche Lösung babe, ich bin entzückt <3
         threads = []
-        for i in range(5):
+        for i in range(15):
             thread = threading.Thread(target=worker, args=(publications_queue,))
             thread.start()
             threads.append(thread)
