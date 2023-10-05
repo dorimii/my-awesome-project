@@ -6,6 +6,7 @@ from urllib.parse import urljoin
 import re
 import threading
 import queue
+from unidecode import unidecode # pip install
 
 MODE_ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
 MODE_ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
@@ -62,16 +63,26 @@ def filterMagazinesByYearRange(magazine_links):
 
     return filtered_links
 
+def cleanString(text):
+    illegal_characters = r':' # TODO probably need to add more later
+    ascii_text = unidecode(text) # maybe redundant
+    cleaned_string = ''.join(char if char not in illegal_characters else '' for char in ascii_text)
+    cleaned_string = ''.join(char if char.isprintable() else '_' for char in cleaned_string)
+    cleaned_string = re.sub(r'_+', '_', cleaned_string)
+    return cleaned_string
 
 def saveToFile(year, publication_mode, magazine_name, edition, text):
     directory_name = "ANNO"
     directory = os.path.join(directory_name, publication_mode, magazine_name, year)
+    # clean directory name
+    directory = cleanString(directory)
     if not os.path.exists(directory):
         os.makedirs(directory)
 
     file_name = year + edition
-
-    with open(os.path.join(directory, file_name), "w", encoding='utf-8') as file:
+    # clean file name
+    file_name = cleanString(file_name)
+    with open(os.path.join(directory, file_name), "w", encoding='utf-8', errors='replace') as file:
         file.write(text)
 
     print(magazine_name + year + edition)
