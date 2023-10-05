@@ -85,7 +85,9 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
     with open(os.path.join(directory, file_name), "w", encoding='utf-8', errors='replace') as file:
         file.write(text)
 
-    print(magazine_name + year + edition)
+    clean_magazine_name = cleanString(magazine_name)
+
+    print(clean_magazine_name + file_name)
 
 
 def getPublicationTitle(raw_publication_title, mode):
