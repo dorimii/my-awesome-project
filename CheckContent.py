@@ -1,12 +1,14 @@
 import csv
 import os
 import requests
+import time
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
 import threading
 import queue
 from unidecode import unidecode # pip install
+from urllib3.exceptions import MaxRetryError
 
 MODE_ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
 MODE_ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
@@ -18,18 +20,38 @@ def notTrefferLog(type, publication_name):
     with open("NotTrefferLogs.csv", 'a', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         if type == "NoEditionForYear":
-            row = [publication_name, "", ""]
+            row = [publication_name, "", "", ""]
         if type == "NoLinkForYear":
-            row = ["", publication_name, ""]
+            row = ["", publication_name, "", ""]
         if type == "NoEditionName":
-            row = ["", "", publication_name]
+            row = ["", "", publication_name, ""]
+        if type == "UnfetchableURL":
+            row = ["", "", "", publication_name]
 
         csv_writer.writerow(row)
 
 
 def fetchPage(url):
-    response = requests.get(url)
-    return BeautifulSoup(response.text, 'html.parser')
+
+    max_retries = 10
+    retry_delay = 60
+
+    for attempt in range(1, max_retries):
+        try:
+            response = requests.get(url)
+            return BeautifulSoup(response.text, 'html.parser')
+
+        except Exception as e:
+            if isinstance(e, MaxRetryError):
+                print(f"MaxRetryError for {url}. {e}")
+                if attempt < max_retries:
+                    print(f"Retrying in {retry_delay} seconds...")
+                    time.sleep(retry_delay)
+                else:
+                    print(f"Max retries reached. Giving up.")
+                    notTrefferLog("UnfetchableURL", url)
+            else:
+                notTrefferLog("UnfetchableURL", url)
 
 
 def extractLinks(soup, conditions):
@@ -63,6 +85,7 @@ def filterMagazinesByYearRange(magazine_links):
 
     return filtered_links
 
+
 def cleanString(text):
     illegal_characters = r':' # TODO probably need to add more later
     ascii_text = unidecode(text) # maybe redundant
@@ -70,6 +93,7 @@ def cleanString(text):
     cleaned_string = ''.join(char if char.isprintable() else '_' for char in cleaned_string)
     cleaned_string = re.sub(r'_+', '_', cleaned_string)
     return cleaned_string
+
 
 def saveToFile(year, publication_mode, magazine_name, edition, text):
     directory_name = "ANNO"
@@ -251,7 +275,7 @@ def main():
     publications_queue = queue.Queue()
 
     # Publication Level
-    with open('validstubsshort.txt', 'r') as file:
+    with open('validstubs.txt', 'r') as file:
         for line in file:
             # Load all previously scraped urls into a queue for threads to scrape their content
             url = line.strip()
