@@ -7,12 +7,16 @@ from urllib.parse import urljoin
 import re
 import threading
 import queue
-from unidecode import unidecode # pip install
+from unidecode import unidecode
 from urllib3.exceptions import MaxRetryError
 
+NUM_THREADS = 24  # 24 threads seem to produce the most efficient rate
 MODE_ZEITUNG_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno?aid={}"
 MODE_ZEITSCHRIFT_BASE_URL = "https://anno.onb.ac.at/cgi-content/anno-plus?aid={}&datum=1900"
 ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
+
+treffer_times = [time.gmtime(0)] * NUM_THREADS
+treffer_lock = threading.Lock()
 
 
 def notTrefferLog(type, publication_name):
@@ -29,6 +33,19 @@ def notTrefferLog(type, publication_name):
             row = ["", "", "", publication_name]
 
         csv_writer.writerow(row)
+
+
+def calculateScrapingSpeed():
+
+    # This is a (maybe dumb) way of tracking how fast we are scraping the site. This func is called every time a
+    # magazine is saved to disk. It temporarily logs the timestamp and returns an approx rate of saves per minute
+
+    with treffer_lock:
+        treffer_times[1:] = treffer_times[:-1]
+        treffer_times[0] = time.gmtime()
+        time_diff_seconds = time.mktime(treffer_times[0]) - time.mktime(treffer_times[NUM_THREADS - 1])
+
+        return (60 / (time_diff_seconds / NUM_THREADS))
 
 
 def fetchPage(url):
@@ -110,8 +127,9 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
         file.write(text)
 
     clean_magazine_name = cleanString(magazine_name)
+    current_scraping_rate = calculateScrapingSpeed()
 
-    print(clean_magazine_name + file_name)
+    print(clean_magazine_name + " " + file_name + ". Curr scraping rate is " + str(current_scraping_rate) + "mags/min.")
 
 
 def getPublicationTitle(raw_publication_title, mode):
@@ -124,6 +142,7 @@ def getPublicationTitle(raw_publication_title, mode):
     publication_title = raw_publication_title.replace(prefix, "")
     publication_title = publication_title.replace(" ", "_") # maybe better like that
     publication_title = publication_title.replace("/", "_")  # maybe better like that
+
     return publication_title
 
 
@@ -283,7 +302,7 @@ def main():
 
         # sehr hübsche Lösung babe, ich bin entzückt <3
         threads = []
-        for i in range(15):
+        for i in range(NUM_THREADS):
             thread = threading.Thread(target=worker, args=(publications_queue,))
             thread.start()
             threads.append(thread)
