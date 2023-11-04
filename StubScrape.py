@@ -1,3 +1,6 @@
+#  ANNO doesn't provide a comprehensive oversight for all publications it has archived, so this is how we
+#  get that list - By brute forcing all possible letter combinations (stubs)!
+
 import requests
 import itertools
 import string
@@ -16,7 +19,7 @@ def scrapeStubs(base_url):
                                                                                       repeat=3)).index(
                                                                    start_combination), None)]
 
-    filename = "validstubs.json"
+    filename = "validstubs.txt"
 
     x = 0
     for comb in combinations:
@@ -54,7 +57,7 @@ def scrapeStubs(base_url):
 
 def main():
     # ANNO has different structures for "Zeitschriften" and "Zeitungen". So we can swap what hardcoded base url
-    # we want to pass deepending on what type of publication we want to get the stubs for here
+    # we want to pass depending on what type of publication we want to get the stubs for here
     scrapeStubs(ZEITUNG_BASE_URL)
 
 

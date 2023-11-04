@@ -1,3 +1,9 @@
+# This script scrapes *all* archived contents published by ANNO from a set timeframe based on the stubs found by
+# StubScrape.py and saves it on disk. ANNO only provides OCR scanned text files from the individual page level,
+# so for any given year to be scraped over a million calls have to be made to the site to combine the texts.
+# For the year 1900, this script saved 2.4GB of plaintext in 18.022 individual editions, which amounts to roughly
+# 400 million words (assuming an average of 5 characters per word), a plausible sum for the time.
+
 import csv
 import os
 import requests
