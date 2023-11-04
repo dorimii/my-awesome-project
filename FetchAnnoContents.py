@@ -17,6 +17,7 @@ ANNO_URL = "https://anno.onb.ac.at/cgi-content/"
 
 treffer_times = [time.gmtime(0)] * NUM_THREADS
 treffer_lock = threading.Lock()
+stubs_file_lock = threading.Lock()
 
 
 def notTrefferLog(type, publication_name):
@@ -45,7 +46,7 @@ def calculateScrapingSpeed():
         treffer_times[0] = time.gmtime()
         time_diff_seconds = time.mktime(treffer_times[0]) - time.mktime(treffer_times[NUM_THREADS - 1])
 
-        return (60 / (time_diff_seconds / NUM_THREADS))
+        return 60 / (time_diff_seconds / NUM_THREADS)
 
 
 def fetchPage(url):
@@ -97,15 +98,15 @@ def extractText(text_url, pattern):
 def filterMagazinesByYearRange(magazine_links):
     if len(magazine_links) == 0:  # No publications found
         return
-    # This is how we only get publications from 1890 to 1920
+    # This is how we only get publications from 1890 to 1920, can be adapted at will
     filtered_links = [link for link in magazine_links if any(str(year) in link for year in range(1889, 1921))]
 
     return filtered_links
 
 
 def cleanString(text):
-    illegal_characters = r':' # TODO probably need to add more later
-    ascii_text = unidecode(text) # maybe redundant
+    illegal_characters = r':'
+    ascii_text = unidecode(text)  # maybe redundant
     cleaned_string = ''.join(char if char not in illegal_characters else '' for char in ascii_text)
     cleaned_string = ''.join(char if char.isprintable() else '_' for char in cleaned_string)
     cleaned_string = re.sub(r'_+', '_', cleaned_string)
@@ -129,7 +130,8 @@ def saveToFile(year, publication_mode, magazine_name, edition, text):
     clean_magazine_name = cleanString(magazine_name)
     current_scraping_rate = calculateScrapingSpeed()
 
-    print(clean_magazine_name + " " + file_name + ". Curr scraping rate is " + str(current_scraping_rate) + "mags/min.")
+    print(clean_magazine_name + " " + file_name + ". Curr scraping rate is " + str(current_scraping_rate) + "mags/min."
+          + " Number of active threads: {}".format(threading.active_count() - 1))
 
 
 def getPublicationTitle(raw_publication_title, mode):
@@ -140,7 +142,7 @@ def getPublicationTitle(raw_publication_title, mode):
         prefix = "ANNO-"
 
     publication_title = raw_publication_title.replace(prefix, "")
-    publication_title = publication_title.replace(" ", "_") # maybe better like that
+    publication_title = publication_title.replace(" ", "_")
     publication_title = publication_title.replace("/", "_")  # maybe better like that
 
     return publication_title
@@ -289,18 +291,28 @@ def worker(publications_queue):
         else:
             scrapeTextAndSave(MODE_ZEITUNG_BASE_URL, url)
 
+        with stubs_file_lock:
+            with open('stubsyettoscrape.txt', 'r') as file:
+                lines = file.readlines()
+
+            # Filter out line containing url
+            lines = [line for line in lines if url not in line]
+
+            # Write the updated content back to the file
+            with open('stubsyettoscrape.txt', 'w') as file:
+                file.writelines(lines)
+
 
 def main():
     publications_queue = queue.Queue()
 
     # Publication Level
-    with open('validstubs.txt', 'r') as file:
+    with open('stubsyettoscrape.txt', 'r') as file:
         for line in file:
             # Load all previously scraped urls into a queue for threads to scrape their content
             url = line.strip()
             publications_queue.put(url)
 
-        # sehr hübsche Lösung babe, ich bin entzückt <3
         threads = []
         for i in range(NUM_THREADS):
             thread = threading.Thread(target=worker, args=(publications_queue,))
