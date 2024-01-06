@@ -1,0 +1,1478 @@
+Zeitschrift für Elektrotechnik.
+Organ des Elektrotechnischen Vereines in Wien'.
+Heft 22.
+WIEK, 27. Mai 1900.
+XVIII. Jahrgang.
+Hemerkungen der Redaction: Ein Nachdruck aus dem redactionellen Theile der Zeitschrift ist nur unter der Quellenangabe
+„Z. f. E. Wien“ und bei Originalartikeln überdies nur mit Genehmigung der Redaction gestattet.
+Die Einsendung von Originalarbeiten ist erwünscht und werden dieselben nach dem in der Redactionsordnung festgesetzten Tarife
+honorirt. Die Anzahl der vom Autor event. gewünschten Separatabdrücke, welche zum Selbstkostenpreise berechnet werden, wolle stets am
+Manuscripte bekanntgegeben werden.
+INHALT:
+Rundschau ... 265
+Drehstrom-Kraftübertragungs-Anlago auf dem Humboldt II-
+Schachte der Nordbühmischen Kohlenworks-Gesellschaft
+in Brüx. Von Alfred Kolben 266
+Das Telegraphon 271
+Kleine M i 11 h e i 1 u n g e n.
+Verschiedenes 271
+Ausgeführte und projectirte Anlagen 272
+Patentnachrichten 273
+Geschäftliche und finanzielle Nachrichten.. ...... 275
+Briefe an die Redaction 276
+Rundschau.
+Wenn es auch viele Mittel und Wege gibt, die
+Geschwindigkeit der Gleichstrom-Motoren zu reguliren,
+so ist man doch, je nach der speciellen Verwendung
+des Motors, an eine bestimmte Methode gebunden,
+tvenn man ökonomisch arbeiten will und auf eine ein­
+fache, leicht und sicher zu hethätigende Regulirvor-
+richtung Werth legt. Nach dem ältesten und all­
+gemeinsten Vorgang wird die Spannung an den Motor­
+klemmen durch einen in den Ankerstromkreis ge­
+schalteten Widerstand verändert, während die Feld­
+bewickelung an der als constant vorausgesetzten Span­
+nung angeschlossen bleibt. Sieht man von den Anker­
+verlusten und der Ankerrückwirkung ab, so wird sich
+die Geschwindigkeit und mithin die Leistung des
+Motors mit der Bürstenspannung ändern; man kann
+so auf recht einfache Weise eine allmälige Regu­
+lirung in den weitesten Grenzen erzielen. Wegen der
+grossen Verluste im Vorschaltwiderstand ist die
+Methode nur dann am Platze, wenn der Motor nur
+selten unter Belastung angelassen werden soll, dann
+aber lange Zeit hei unveränderter Geschwindigkeit
+fortläuft. Bei Druckereipressen, die ein sanftes, stoss-
+freies Angehen des Motors erfordern, schaltet B e c k e t
+einen Widerstand mit stufenweisen Absätzen an die
+Motorleitung und legt den Anker mittelst einer Schleif­
+kurhel allmälig zu diesem Widerstand parallel, der
+bei Erreichung der normalen Tourenzahl ausge­
+schaltet wird.
+Bei Werkzeugmaschinen, welche mit verschiedenen
+Geschwindigkeiten laufen sollen, eignet sich besser die
+Methode, die Feldstärke zu variiren, entweder durch
+Einschalten von Widerstand in den Erregerstromkreis,
+oder durch sinngemässe Schaltung und Verbindung
+der Erregerwickelungen und nur selten durch radiale
+Verschiebung der Pole.
+Eine möglichst weitgehende 'Tourenregulirung
+erhält man bei der Anordnung, durch eine Spule im
+Nebenschluss ein constantes Feld der normalen Ge­
+schwindigkeit entsprechend zu erzeugen, wobei durch
+Einschaltung von Serienwickelungen in den Anker­
+stromkreis theils durch die Feldverstärkung, theils
+durch die Ankerstromschwächung niedrigere Touren­
+zahlen erzielt werden können. Wenn man, wie z. B.
+bei Werkzeugmaschinen, für jede Belastung eine be­
+stimmte constante Geschwindigkeit braucht, mag folgende
+Anordnung gute Resultate liefern. Zuerst wird der
+Anker mit einer kräftigen Feldspule in Reihe an die
+Leitung angelegt und dann erst die parallel ge­
+schalteten Nebenschlussspulen der Erregerwickelung
+eingeschaltet. Zur schrittweisen Erhöhung der Touren­
+zahl werden zuerst die Serienspule und dann die Neben­
+schlussspulen bis auf eine ahgeschaltet. Die Schwächung
+des Feldes findet natürlich an dem übermässigen Feuern
+am Collector seine Grenzen; deshalb müssen solche
+Motoren immer grösser und schwerer als gewöhnlich
+construirt werden.
+Nach einer dritten Regulirmethode versieht man
+den Anker mit zwei gleichen Wickelungen, je mit
+einem Collector verbunden. Legt man beide parallel
+an die Leitung, so hat der Motor bei grösster Ge­
+schwindigkeit die maximale Leistungsfähigkeit; bei
+Hintereinanderschaltung ist die Geschwindigkeit und
+Arbeitsleistung die Hälfte. Eine dritte Geschwindig­
+keitsstufe lässt sich durch zwei ungleiche Wickelungen,
+wovon die eine z. B. für 1500, die andere für
+1000 Touren berechnet ist, erreichen; bei Serien­
+schaltung derselben wird der Anker, wie eine an­
+nähernde Rechnung ergibt, mit 600 Touren laufen.
+Wenn man aber nur zwei Geschwindigkeiten braucht
+und für jede eine bestimmte Belastung vorgesehen ist,
+so ist es besser, von vorneherein die Wickelungen
+diesen Bedingungen anzupassen und je nach Bedarf
+einzuschalten. Diese Regulir-Methoden haben sich als
+äusserst ökonomisch erwiesen.
+Die Regulirung des Motors kann auch so ge­
+schehen, dass man den Anker je nach der zu erthei-
+lenden Geschwindigkeit an Leitungen von verschieden
+hoher Spannung anlegt. Nach der Methode von
+Mather erzeugt ein Generator die für die maximalen
+Motortouren nöthige Spannung; zur Untertheilung der­
+selben in regelmässig wachsende Stufen sind „Aus­
+gleichsmotoren“ angeordnet, deren parallel geschaltete
+Feldspulen von der Gesammtspannung gespeist werden,
+während ihre Anker für verschiedene Spannung ge­
+wickelt, in Serie verbunden und auf eine gemeinsame
+Axe aufgekeilt sind. Von den Bürsten eines jeden
+Ausgleichsmotors gehen Leitungen aus, an welche durch
+Controller-Apparate die Anker der eigentlichen Arbeits­
+motoren, dem jeweiligen Geschwindigkeitsbedarf ent­
+sprechend, angelegt werden. Es ist natürlich naheliegend,
+diese Ausgleichsmotoren durch eine Accumulatoren-
+
+Seite 266.
+ZEITSCHRIFT, FÜR ELEKTROTECHNIK.
+Nr. 22.
+batterie zu ersetzen und so eine sehr empfindliche und
+dabei ökonomische Regulirmetho'de zu erzielen.
+Der von Professor Jamieson gehaltene Vortrag
+über die Ursache der Störung, welche die sub­
+marine Telegraphie in Capetown durch den elek­
+trischen Trambahnverkehr erfuhr, hat zu einer lebhaften
+Discussion geführt. Die einen behaupteten, dass diese
+unliebsame Erscheinung, die sich in Knickungen der
+vom Siphon-Recorder aufgezeichneten Curven jedesmal
+dann zeigte, wenn ein Trambahnwagen anfuhr, auf
+Induction zurückzuführen sei, andere, dass dies nicht
+der Fall sein könne, sondern auf die grösseren in der
+Erdrückleitung auftretenden Potentialdifferenzen beim An­
+fahren beruhe. Jami eson empfahl, die Kabelerdplatte in
+die See zu verlegen und hiezu ein eigenes Kabel zu ver­
+wenden; dies erwies sich aber nur so lange als vorteil­
+haft, als der Verkehr kein grosser war; mit der Zu-
+nahrhe desselben traten die Störungen wieder auf, so
+dass als einziges Schutzmittel dagegen die Benützung
+von Doppelleitungen zu telegraphischen und telephoni­
+schen Zwecken übrig bleibt.
+In der British Physical Society wurde kürzlich
+ein Vortrag gehalten über die Schwingungsamplitude
+von Telephonmembranen. Die Messung geschah auf
+folgende Weise: Eine Schraube von y 2 mm Ganghöhe,
+war mit einem graduirten Kopf versehen, der noch
+■ 1 einer Umdrehung abzulesen gestattete, so dass
+mit dieser Mikronmeterschraube noch— Mikron ere-
+10 ö
+messen werden konnte; diese Schraube wirkte auf ein
+Hebelsystem, welches die Bewegung der Schraube im
+Verhältnisse 1:100 verkleinerte, so dass— einer
+’ 5000
+Schraubenumdrehung
+1
+1000
+Mikron entsprach.
+Drehstrom-Kraftübertragungs-Anlage auf demHumboldtll-
+Schachte der Nordböhmischen Kohlenwerks-Gesellschaft
+in Brüx.
+Von Ing. Alfred Kolben, Prag-Vysoean.
+Eines jener zahlreichen Anwendungsgebiete, welche
+die Vorzüge der elektrischen Kraftübertragung, ins­
+besondere vermittels Drehstrom voll zur Geltung
+kommen lassen, ist der Schachtbetrieb.
+Dem älteren Kraftvertlieilungsprincipe mit ein­
+zelnen an verschiedenen Punkten einer Schachtanlage
+situirten Dampfmaschinen, haftet eine Schwerfälligkeit
+an, die man nur mangels eines höherwerthigen Ersatzes
+in Kauf nehmen musste.
+Abgesehen von den günstigen Betriebs- und
+Unterhaltungskosten, die sich aus der Disposition nur
+eines Kessel- und Maschinenhauses nothwendigerweise
+ergeben müssen, gewährleistet die Centralisation der
+disponiblen Betriebskraft eine ungleich höhere Betriebs­
+sicherheit, da die an einer Stelle concentrirten Primär­
+maschinen die nöthige Wartung und Ueberwachung
+in reichlichem Maasse zulassen. Die theilweise Ab­
+hängigkeit des Betriebes von einer grösseren Zahl längs
+der Anlagen vertheilter Dampfmaschinenwärter und
+Heizer bildet einen Uebelstand, der gerade in letzter
+Zeit in Böhmen und Mähren ins scharfe Licht trat
+und der bei elektrischem Betriebe zumindest stark ab­
+geschwächt wird.
+Der Elektromotor selbst stellt nur geringe Anfor­
+derungen, insbesondere hier, wo man es zumeist mit
+Betrieben von gleichmässigem Kraftbedarf zu thun hat;
+und hier ist es gerade, wo der Drehstrommotor, als
+Muster der Genügsamkeit, allen Ansprüchen entspricht.
+An Stelle der langen Dampf- oder Druckluftleitungen
+tritt der schmiegsame Leitungsdraht, an Stelle der
+empfindlichen Dichtungen und Flanschen der einfache
+Isolator.
+Die Spitze dieses Hebelsystems drückte gegen die
+Mitte der Telephonmembrane und wirkte so wie ein
+Relaiscontact. Die Schraube wurde zuerst so eingestellt,
+dass sie das Diaphragma berührte. Hierauf wurden
+durch das Telephon schwache Ströme geschickt und
+die Schraube verstellt, bis der elektrische Contact wieder
+hergestellt war. Auf diese Weise wurden mittelst
+stationärer Ströme die Amplituden der Telephonmembrane
+gemessen und in ein Diagramm gebracht. Aus der
+gemessenen Stärke des Telephonstromes konnte nun ein
+Rückschluss auf die Schwingungsweiten der Membrane
+gezogen werden. Es ergab sieb, dass die noch hörbaren
+Schwingungen des Telephones einer Amplitude von
+Mikron entsprachen und bis Mikron anstiegen.
+Thomas Tommasina überreichte kürzlich der
+Pariser Akademie eine Abhandlung über die Auto-
+Decohärirung der Kohle. Tommasina hatte früher
+einen Cohärer aus Kohle beschrieben, der lediglich
+durch die Unterbrechung des Stromes ohne Benützung
+eines Schüttlers die durch die Wirkung der elektrischen
+Wellen erlangte Leistungsfähigkeit verlor. Bei Ver­
+wendung von Mikrophonkohlenpulver konnte er nun
+constatiren, dass die Decohärirung auch ohne Strom­
+unterbrechung mit der grössten Präcision erfolgte.
+In Würdigung aller Vortheile einer elektrischen
+Kraftübertragung entschloss sich die N o r d b ö h m i s c h e
+Kohlenwerksgesellschaft in Brüx, auf ihrem
+Humboldt Il-Schachte in Brüx eine Drehstrom-Centrale
+zu errichten. Die Ausführung der completen elektri­
+schen Anlage wurde der Elektricitäts-Aetien-
+Gesellschaft vormals Kolben& Co. in Prag-
+Vysocan im Monate Juli v. J. übertragen. Im Jänner 1. J.
+konnte mit der Montirung der Maschinen begonnen
+werden und im März dieses Jahres wurde die ganze
+Anlage in Betrieb genommen. Die auf Schacht Hum­
+boldt II erbaute Centrale dient folgenden Betrieben:
+1. Für eine Seilbahn in der Grube auf Hum­
+boldt II. Untertag; Kraftbedarf 30 PS.
+2. Für den Betrieb des Grubenventilators auf
+Luftschaeht III. Obertag; Kraftbedarf 60 PS
+3. Für den Grubenventilator auf Luftsehacht III.
+Obertag; Kraftbedarf 50 PS.
+4. Für den Grubenventilator auf Luftschacht IX.
+Obertag; Kraftbedarf 50 PS.
+5. Für den Betrieb einer grösseren Seilbahn in
+der Grube unter dem Luftschacht III. Untertag; Kraft­
+bedarf 60 PS.
+6. Für den Betrieb zweier transportabler Rotations­
+pumpen, welche längs einer Strecke von ca. 700 m das
+in den sogenannten Abbaupingen sich ansammelnde
+Wasser auszupumpen haben. Kraftbedarf 8 PS
+
+Nr. 22.
+Seite 267.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+7. Für die theilweise Be­
+leuchtung in der Grube auf
+Humboldt II.
+8. Für die Beleuchtung
+der gesummten Scbacbtanlage
+auf Humboldt II.
+A. Primärstation.
+Die auf Schacht Hum­
+boldt II erbaute Primärstation
+besteht aus drei liegenden Aus­
+puff-Dampfmaschinen, die bei
+150 Touren p. M. 170 PS leisten
+und von denen zwei in stän­
+digem Betriebe sich befinden,
+während eine als Reserve dient.
+Dieselben sind Eincylinder-
+maschinen mit Collmann-Steu­
+erung. Der Axenregulator sitzt
+auf der Steuerwelle und ist mit
+einer von Hand regulirbaren
+Tourenverstellvorricbtung aus­
+gestattet, die beim Parallel­
+schalten gute Dienste leistet. Die
+vermittels eines endlosen Baum-
+wollriemens vom Schwungrade
+angetriebenen drei Drehstrom-
+Generatoren Type Kolben,
+(Fig. 1 und 2) sind für eine Leistung von
+135 Kilovoltampere bei einem cos <p= 0'8 erbaut. Der
+Wirkungsgrad derselben ist mit 92°/ n garantirt. Die
+Phasenspannung beträgt 2150, die Periodenzahl 50 p. See.
+Dieselben gehören der sogenannten Polfeldtype an.
+Das rotirende Magnetrad aus Stahlguss mit 14 be­
+wickelten Polen erhält den Magnetisirungsstrom ver­
+mittels zweier Schleifringe von der direct mit der
+Dynamo gekuppelten Erregermaschine von 40 PSpannung.
+Die Spulen für die Erregerwickelung des Magnet­
+rades sind auf die kreisrunden Polkerne fest aufge­
+presst und gegen die Wirkung der Centrifugalkraft
+durch an die Polkerne angegossene Verbreiterungen
+der Polschuhe, sowie durch Bronzeplatten sicher
+gehalten. Die feststehende Armatur, die den hochge­
+spannten Strom führt, ist aus weichstem, 0'3 mm starkem,
+auf besondere Art isolirtem Eisenblech aufgebaut und
+trägt am inneren Umfange 42 geschlossene, halbgerun-
+dete Nuthen, in welchen die durch 3 mm
+t -| starke Micanitröhren vom Eisen sorg­
+fältig isolirten Hochspannungsspulen ein­
+gebettet liegen.
+Die Welle ist aus Tiegelgussstahl.
+Eine besondere Sorgfalt ist der Con-
+struction der Ringschmierlager gewidmet.
+Dieselben besitzen LagÄ'schalen in Kugel­
+form, die auf ihrer kugelförmigen Unter­
+lage frei beweglich aufruhen und ver­
+möge der Nachgiebigkeit der Zusammen­
+stellung ein Heislaufen oder Klemmen
+ausschliessen.
+Die Erregerdynamos haben vier Pole,
+von denen zwei bewickelt sind. Das Magnet­
+gehäuse ist von Stahlguss. Die Anker­
+wickelung besteht aus maschinell in Scha­
+blonen gewickelten, in die offenen Anker-
+nuthen eingelegten Spulen. Obzwar nun
+eine Beschädigung der Wickelung auf
+diese Art fast ausgeschlossen erscheint,
+bietet doch diese Wickelungsart den Vor­
+theil leichtester Auswechselbarkeit einzel­
+ner Ankerspulen.
+Der hochgespannte Drehstrom ge­
+laugt in durch Kabelcanäle geführten
+Leitungen zur Schalttafel, auf welcher
+in gründlicher Erwägung der für den
+Fig. 2;
+
+Seite 268.
+Nr. 22.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Luftschachtln. Luftschacht HumboiJlxhachtü Beleuchtung
+S.idoschaM r -*U- «■»**•
+Seilbahnen AM SO
+Ae
+a 9
+ED
+H.G.
+H.S,
+H.S 3
+H.Sch 3
+H EW.
+AAT.
+N.R.
+N.W.
+PhL.
+PhSch
+Ve.
+X
+Legende:
+Amperemeter der Haupterregung
+„ Hochsp Drehstr. Generatoren.
+Erregerdynamo
+Hochspannung*. -Orehslr.- Generatoren*
+-Sicherung (Ipolig)
+>" (ipoHg)
+« -Ausschalter
+Haupferncguhg- Wichtung
+/Mefshaus Fnrmator
+fJebenschlufsregulaloren der Erreger.
+Hebenschlufi-Wichtung
+Pahseniampen
+» -Schalter
+Voltmeter der Hauplcrregung
+,. Drehslr Generatoren
+* Umschalter.
+Fig. 3.
+sicheren Betrieb nothwendigen Instrumente nur die mit
+Ausschluss aller nicht unbedingt erforderlichen montirt
+sind, da in der Einfachheit die sicherste Gewähr eines
+ungestörten Betriebes liegt. Die Fig. 3 zeigt das Schal­
+tungsschema in der Primärstation, die Fig. 4 die An­
+sicht zweier Felder hinter der Schalttafel mit sämmt-
+lichen in Verwendung gezogenen Hochspannungsaus­
+schaltern und Sicherungen. Das Parallelschalten der
+Maschinen geht leicht und rasch vermittels eines
+Phasen-Indicators vor sich.
+Als Bedienungsraum hinter der Schalttafel dient
+der 2 m breite Gang. Auf einer Seite sind in hori­
+zontaler Lage die ausschaltbaren Hochspannungs­
+sicherungen für die Fernleitungen auf eiserner, tisch­
+förmiger Construction untergebracht.
+B. Leitungsanlage.
+AusdemMaschinenhausetreten zwei getrennte Fern­
+leitungen aus, wovon eine für den Motor des Ventilators
+auf Luftschacht III und für den 60 PS Seilbahn-Motor
+unter dem Luftschacht III dient, während die andere
+die gemeinsame Leitung für die Motoren der Luft­
+schächte V und IX, sowie für den Transformator der
+beiden Pumpen-Motoren zur Entwässerung der Pingen
+bildet. Die Entfernungen von der Centrale betragen
+für die einzelnen Secundärstationen:
+Seilbahn-Motor in der Grube auf Humboldt II 300 m
+Luftschacht III 675;,
+Seilbahn-Motor unter Luftschacht III... 875„
+Luftschacht V 1250,,
+Luftschacht IX 3735,,
+Die Leitungsverluste betragen primär 5 %, se-
+cundär 3 %.
+Die Freileitung ist auf Holzmasten vermittelst
+Hochspannungs-Isolatoren geführt, die nach dem gleich­
+seitigen Dreieck befestigt sind; stellenweise findet eine
+Kreuzung der drei Drähte zwecks Reduetion des Einflusses
+der Selbstinduction statt. Die Leitungen sind minimal
+6 m über Erde gelegt. An Strassenüberfuhrungen sind
+Schutznetze unterhalb der Leitungen angebracht. Die
+Maste sind ca. 30 m voneinander gestellt, ungefähr jeder
+fünfte Mast trägt Saugspitzen; bei allen Ein- und Aus­
+führungen an Gebäuden sind knapp an der Eintritts­
+stelle Hochspannungs- Blitzschutzvorrichtungen an­
+gebracht.
+Das totale Gewicht an aufgewandtem blankem
+Leitungsdraht beträgt ca. 5000 hg.
+Die Verlegung der Secundärleitungen in der
+Grube, sowie des Panzerkabels im Schacht erfolgte mit
+Rücksicht auf Feuchtigkeit mit peinlicher Sorgfalt.
+
+Nr. 22,
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Seite 269.
+Ueber die Art der Leitungs Verlegung in Schächten
+ist in dem Artikel „Elektrische Kraftübertragungs-
+Anlage auf dem ärarischen Julius III-Schacht in Brüx“
+in der „Oesterreichischen Zeitschrift für Berg- und
+Hüttenwesen“, Jhrg. 1899, Heft Nr. 37, Tafel XVII,
+näheres niedergelegt.
+C. Secundärstationen.
+1. Der Seilbahn-Motor auf Humboldt II liegt in
+der feuchten Grube; es wurde daher für diesen Motor
+die Spannung von 2150 V auf 360 V reducirt; der zu­
+gehörige Transformator (Fig. 5) ist in der Primärstation
+Fig. 4.
+aufgestellt. Derselbe ist innerhalb einer eisernen Con-
+struction aufgestellt, auf welcher sich sowohl die
+Primär-, als auch die SeCundärsicherungen befinden.
+Dieselben sind in handlicher Weise horizontal montirt.
+Das rechts auf dem Bilde sichtbare Panzerkabel
+mit seinem Endverschluss bildet das directe Zuleitungs­
+kabel in die Grube.
+Der Motorleistet bei960Tourenp. M. 30 PS; er besitzt
+ein direct angebautes Vorgelege 1: 4. Der Zahnkolben
+besteht aus Rohhaut, das Zahnrad aus Gusseisen, und
+sind beide in einem gusseisernen Gehäuse eingeschlossen.
+Ein Motor gleicher Art ist in Fig. 6 abgebildet. Mittels
+eines Anlassers wird durch gleichzeitiges allmähliches
+Abschalten von Widerständen in den drei Stromkreisen
+des Rotors der Motor in Gang gebracht; das Abschalten
+der Widerstände erfolgt in bekannter Weise durch
+Drehen einer einzigen Kurbel.
+2. Am Luftschachte III in 675 m Entfernung von
+der Centrale ist am Tagkranze des Luftschachtes für
+den Antrieb eines Grubenventilators ein Motor für
+2000 V Betriebsspannung aufgestellt. Die Leistung des­
+selben beträgt 60PS bei einem cos cp= 0'9 und bei
+720 Touren p. M. Der Motor treibt mittels Riemen­
+scheibe und endlosen Baumwollriemens die mit 150 Touren
+rotirende Ventilatorwelle an.
+Zwei Ventilatormotoren auf Luftschacht V und IX
+erfordern zwar blos einen Kraftbedarf von 50 PS, trotz­
+dem gelangte aber, um eine gemeinsame Reserve
+schaffen zu können, auf allen drei Ventilatorstationen die
+gleiche Motortype für 60 PS Leistung zur Auf­
+stellung.
+Bei diesen Tag und Nacht ununterbrochen laufen­
+den Hochspannungsmotoren, welche, von der Centrale
+entfernt, überdies den ganzen Tag lang siel)^ selbst
+überlassen sind und nur einmal im Tage die Controle
+Fig. 5-
+des die Runde machenden Wärters in Anspruch nehmen ,,
+musste sowohl in mechanischer, als auch elektrischer
+Hinsicht die grösste Sorgfalt auf die Durchführung ver­
+wendet werden.
+Der Stator ist aus 0’3 mm dicken, weichst geglühten
+Eisenblechen zusammengesetzt. Am inneren Umfang
+sind 48 halbgeschlossene Nuthen angeordnet, in welchen
+die vom Eisen durch Micanitformen isolirte Hoch­
+spann ungswickelungliegt.DurchpassendeDimensionirung
+der Nuthen- und Stegverhältnisse, durch die Form der
+Nuten, sowie durch geringe Eisenbreite bei grossem
+Durchmesser wurden die Inductionsverhältnisse im
+Luftraum und im Eisen entsprechend einer minimalen
+Streuung bestimmt. Der Tourenabfall des Motors
+zwischen Leerlauf und Vollast beträgt 4°/ 0.
+Der Rotor trägt am Umfang 120 beiderseitig halb­
+gerundete längliche Nuthen, in welchen die aus massiven
+Kupferstäben gebildete Wickelung liegt. Dieselbe bietet
+in ihrem einfachen und robusten Aufbau eine Btirg-
+schaft für den ungestörten Betrieb.
+Vermittels dreier, innerhalb des Motorlagers an­
+geordneter Schleifringe wird beim Anlassen duich
+allmähliges Abschalten von Widerstand die Rotor-
+
+Seite 270.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Nr. 22.
+Fig. 6.
+Wickelung kurzgeschlossen. Die Lager besitzen auto­
+matische Ringschmierung und sind im Verhältnis zum
+Durchmesser lang dimensionirt, um den Rotor innerhalb
+des Luftraumes von 1 mm sicherzuhalten und die Ab­
+nützung auf ein Minimum herabzudrttcken.
+Der die Lager tragende Lagerstern ist centrisch im
+Motorgehäuse eingepasst; die Lagersitze sind mit dem
+Stator zugleich ausgebohrt, daher genau centrisch. Der
+Lagerstern selbst ist gegen das Motorgehäuse kräftig
+versteift. Die Welle ist aus Tiegelgussstahl.
+3. und 4. An den Luftschftchten V, 1250 m von
+der Centrale, und IX, 3735 »n, sind zwei Motoren genau
+gleicher Bauart und Leistungsfähigkeit wie der vor­
+beschriebene aufgestellt; beide arbeiten mit 2000 V und
+treiben mittels Riemen zwei Grubenventilatoren von 50 PS
+Kraftbedarf hei 175 Touren p. M. der Ventilator­
+welle an.
+5. Unter dem Luftschachte III, ca. 200 m vom
+Tagkranze entfernt, ist in der Grube ein 60 PS Motor
+für den Betrieb einer Seilbahn zur Aufstellung gelangt
+(Fig. 6); derselbe erfordert 360 V und macht 720 Touren
+p. M. Der zugehörige Transformator ist im Ventilator­
+haus des Luftschachtes III untergebracht; hier befinden
+sich die Primär- und Secundärsicherungen für diesen
+Transformator. Vor dem Tagkranze wird die Spannung
+für diesen Motor von 2000 auf 360 V transformirt
+und der niedergespannte Strom dem Motor mittels
+Panzerkabel in die Grube zugeführt.
+Die Bauart des Motors entspricht obiger Be­
+schreibung, doch kommt hier ein Vorgelege 1: 4 hinzu.
+Der Zahnkolben ist aus Schmiedestahl, das Zahnrad
+aus Gusseisen.
+6. I iir die Entwässerung der Abbaupingen wurden
+zwei transportable Rotationspumpen, System Hesse
+vorgesehen, welche bei 185 Touren p. M. 1000 l und
+bei 280 Touren p. M. 1500 1 auf 12 m Höhe zu fördern
+haben.
+Die Kraft wird dem in der Kähe des Luft­
+schachtes IX situirten Transformator entnommen, wo­
+selbst die Spannung von 2000 V auf 200 herabtrans-
+formirt wird, u. zw. derart, dass eine Secundärleitung
+längs der zu entwässernden Strecke geführt ist. An
+den Gebrauchsstellen sind Anschlusscontacte für die
+Leitung zu den Motoren vorgesehen.
+Die Anschlusscontacte sind direct an den Holz­
+masten befestigt und in verschliessbaren Kasten unter­
+gebracht. Die Pumpen sind auf Wagen montirt, auf
+welchen sich auch die Kabelrollen und die Wasser-
+schläuche mit den nöthigen Verbindungsmuffen vor­
+finden. Die Motoren leisten bei 1440 Touren p. M. je
+4 PS und besitzen ein direct angebautes Vorgelege 1:6.
+7. Die theilweise Beleuchtung der Grube auf
+Humboldt II umfasst 20 Glühlampen. Der Strom wird dem
+daselbst befindlichen Kraftkabel des Seilbahn-Motors
+entnommen.
+8. Die Beleuchtungsanlage auf dem Humboldt II-
+Schachte umfasst ca. 150 Glühlampen a 16 X. K. und
+5 Bogenlampen ä 1000 N. K. und wird der Strom
+hiefür einem Transformator in der Primärstation ent­
+nommen.
+Es sei noch bemerkt, dass der Verständigung
+zwischen der Primärstation und allen Motorstationen
+eine üelephonanlage dienlich ist; die Leitung hiefür
+ist auf den Masten für die Freileitung, u. zw. 1 m
+unterhalb derselben, geführt.
+Bemerkenswerth ist, dass hiebei ein eigenes System
+einer Telephonstations-Einrichtung für Hochspannungs­
+anlagen Anwendung fand, welches jede Gefahr bei
+Benützung desselben ausschliesst und das sein Entstehen
+Herrn Prof. Dr. Puluj in Prag verdankt.
+Diese Anlage, welche für sich ein typisches Bild
+einer Hochspannungs-Kraftübertragung im Schacht­
+betriebe bietet, functionirt seit ihrer Inbetriebsetzung
+tadellos.
+Der gesammte elektrische Theil wurde von der
+E. A. G. vorm. Kolben& Co. in Prag-Vysocan aus-
+
+Nr. 22.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Seite 271.
+.geführt. Die Dampfmaschinen lieferte die Maschinen­
+fabrik F. Ringkoffer in Prag- Smichow. Um die
+Projectirung dieser Anlage hat sich Herr Ober-Ingenieur
+•S c h m u e d der Nordböhmischen Koklenwerks-Gesell-
+schaft in Brüx verdient gemacht.
+Das Telegraphon.
+Das Telegraphon, dessen Erfinder, Herr V. Poulsen
+in Kopenhagen, das Wesen seines Apparates im allgemeinen
+bereits in technischen Kreisen bekanntgegeben hat, ist nichts
+anderes als eine besondere Art eines Phonographen, bei welchem
+aber das „Beschreiben“ der Walze durch Vermittlung einer Tele­
+phonleitung auf elektrischem Wege erfolgt. Dieser elektro­
+magnetische Phonograph wird mit Mikrophon und Telephon
+■derart combinirt, dass die im Transmitter erzeugten und über
+die Telephonleitung in das Telegraphon gelangenden Sprech­
+ströme durch das letztere in unsichtbarerWeise niedergeschrieben
+■und dann später jederzeit in einem telephonischen Empfänger
+reproducirt werden können.
+Der Unterschied zwischen dem gewöhnlichen Phonographen
+■und dem Telegraphon besteht also hauptsächlich darin, dass bei
+dem letzteren das „Niederschreiben“ der Tonwellen nicht auf
+mechanischem, sondern auf magnetischem Wege mit Hilfe eines
+Elektromagneten erfolgt und dass demzufolge auch die beweg­
+liche Unterlage hier Stahl oder Nickel und nicht Wachs oder
+eine ähnliche Substanz ist.
+Die Wirkungsweise des Apparates ist die folgende: Wenn
+durch die Windungen des Elektromagneten Telephonströme
+geschickt werden und gleichzeitig ein Stahlband ganz nahe an
+dessen Polen vorübergeführt wird, werden die aufeinander­
+folgenden Stellen der Oberfläche dieses Stahlbandes entsprechend
+den magnetischen Schwankungen in den Elektromagnetkernen,
+also auch entsprechend den Aenderungen des Telephonsprech­
+stromes in grösserem oder geringerem Maasse magnetisirt. Wenn
+dann das so magnetisch „präparirte“ Stahlband wieder in der­
+selben Richtung wie früher vor den Polen desselben oder auch eines
+anderen gleichartigen Elektromagneten vorbeigeführt wird und die
+Windungen dieses letzteren zu einem Telephon geführt werden, so
+werden entsprechend den ungleich stark remanent magnetischen
+Stellen des Stahlbandes auch Ströme von in genau gleicher Art
+wechselnder Stärke in den Windungen des Elektromagneten her­
+vorgerufen, welche in dem Telephon die auf dem Stahlbande
+früher fixirten Töne wiedergeben, und zwar so oft, als das Stahl­
+band in gleicher Weise an den Magnetpolen vorbeigeführt wird.
+Durch Versuche soll bereits festgestellt sein, dass das Tele­
+graphon die empfangene Sprache vollkommen rein und frei von
+Nebengeräuschen gerade so wie beim gewöhnlichen Telephoniren
+xeproducirt. Im Vergleiche zum Phonographen besitzt es den
+Vortheil, dass die „Schrift“, da sie nicht durch mechanische Ein­
+drücke hergestellt wird, von dem Stahlbande sehr leicht durch
+■die Einwirkung eines nahe daran vorbeigeführten starken Mag­
+neten beseitigt werden kann; durch eine solche Operation ver­
+schwindet jede Spur der Schrift und das Band wird zur Auf­
+nahme neuer magnetischer Zeichen wieder vollkommen geeignet.
+Der Apparat besteht aus einem kleinen Elektromagneten
+und einem an jenem vorbeizuführenden Stahlbande. In einigen
+Fällen hat es sich praktischer erwiesen, statt eines Stahlbandes
+eine Claviersaite zu verwenden, die in die schraubenförmig an­
+geordneten Windungen einer horizontalen, etwa durch einen
+kleinen Elektromotor anzutreibenden drehbaren Walze eingelegt
+wird, während die Fortbewegung des schreibenden oder lesenden
+Elektromagnets längs eines zur Achse des Apparates parallelen
+Metallstabes mittelst des schraubenförmigen Gewindes der Walze
+selbst erfolgt. Wenn der ganze Draht „verbraucht“ ist, wird der
+Elektromagnet durch eine eigene Vorrichtung automatisch von
+der Walze losgelöst und wieder schnell in seine Anfangslage
+zurückgebracht.
+Die oben erwähnte Ausführung des Apparates mit Clavier-
+saitendraht ist wohl nur für Gespräche ausreichend, die nicht
+viel länger als eine Minute andauern. Für längere Gespräche
+wurde dagegen mit gutem Erfolge ein Stahlband von einigen Milli­
+metern Breite undi/20’««* Stärke verwendet,welches von einem kleinen
+Haspel auf einen zweiten gewunden und während seiner Be­
+wegung durch den Elektromagneten „präparirt“ wurde.
+Bei einer Erprobung des Telegraphons auf gewöhnlichen
+Telephonleitungen wurde dasselbe als Empfänger derart ein­
+geschaltet, dass es sich bei einem ankommenden Rufsignale
+automatisch in Bewegung setzte und dann die Mittheilung des
+Senders registrirte. Durch eine derartige Ausrüstung einer
+Telephonstation mit dem Telegraphon ist es also dem Abonnenten
+ermöglicht, die während seiner Abwesenheit an ihn gelangten
+telephonischen Mittheilungen in der oben geschilderten Weise bei
+seiner Rückkehr jederzeit abzuhören.
+Weiters soll es möglich sein, mit Hilfe des Instrumentes
+eine Nachricht einer grösseren Zahl von Abonnenten gleichzeitig
+zu übermitteln. In diesem Falle wird das Stahlband als Band
+ohne Ende in ähnlicher Weise wie bei einer Bandsäge angeordnet
+und geführt. Längs des Bandes sind eine Anzahl kleiner Elektro-
+magnete situirt, von denen der erste mit einem Transmitter, die
+übrigen aber mit den zu den einzelnen Abonnenten führenden
+Leitungen verbunden werden. Das Gespräch wird von dem
+Stahlbande beim Passiren des mit dem. Transmitter verbundenen
+ersten Elektromagneten aufgenommen, bei seinem darauf folgenden
+Vorbeigange an den übrigen Elektromagneten an die mit diesen
+verbundenen Telephonstationen sofort abgegeben und nach dem
+Passiren des letzten Elektromagneten durch einen starken Magnet
+gleich beseitigt (gelöscht).
+Es verdient erwähnt zu werden, dass eine ähnliche Ein­
+richtung Wilhelm He dick im Jahre 1887 sich patentiren liess;
+wir werden auf diese Einrichtung gelegentlich zurückkommen.
+J.
+KLEINE MITTHEILUNGEN.
+Verschiedenes.
+Neue Telegraphen Verbindung zwischen Deutschland und
+England. Dem deutschen Bundesrathe ist ein Nachtragsetat für
+das Rechnungsjahr 1900 zugegangen. Es werden 2 Millionen
+Mark gefordert als einmalige Ausgabe zur Herstellung einer
+neuen (der fünften) Telegraphenverbindung zwischen Deutschland
+und England. Der Begründung dieser Forderung entnehmen wir
+Folgendes:
+Der telegraphische Verkehr zwischen Deutschland und
+Grossbritannien ist seit dem Jahre 1896, in welchem die vierte
+Kabelverbindung zwischen beiden Ländern hergestellt wurde,
+lebhaft gestiegen. Während die Zahl der Telegramme im Jahre
+1895 noch 1,867.868 betrug, sind im Jahre 1899 2,465.613 Tele­
+gramme ausgewechselt worden. Infolge dieser Zunahme sind die
+vorhandenen deutsch-englischen Telegraphenleitungen derart über­
+lastet, dass täglich ein grösserer Theil der Correspondenz erheb­
+lich, oft bis zu mehreren Stunden verzögert wird. Aus den
+Kreisen des Handelsstandes sind hierüber in den letzten Monaten
+lebhafte ^Klagen erhoben und dringende Vorstellungen über die
+Notliwendigkeit einer besseren telegraphischen Verbindung mit
+England gemacht worden. Insbesondere hat sich für Bremen die
+Herstellung einer verbesserten telegraphischen Verbindung mit
+Liverpool im Interesse der Entwickelung des deutschen Baum­
+wollhandels, dessen Hauptsitz Bremen ist, als ein unabweisbares
+Bedürfnis herausgestellt. Wie dringend dies in den betheiligten
+Kreisen empfunden wird, erhellt aus- der Thatsache, dass in letzter
+Zeit die Bremer Baumwollbörse zur Beförderung ihrer Markttele­
+gramme von Liverpool den kostspieligen Umweg über Newyork
+benutzt, und auf diesem Wege die Telegramme bis zwei Stunden
+schneller erhalten hat, als auf dem Wege Liverpool-London-Bremen.
+Diese Rückständigkeit des deutsch-englischen Telegraphendienstes
+hinter dem deutsch-amerikanischen ist unhaltbar. Ausser dem
+deutsch-englischen Telegrammverkehre hat auch der auf die Kabel
+beider Länder angewiesene österreichisch-englische Tele­
+gramm verkehr in dem Masse zugenommen, dass die beiden
+durch Deutschland führenden directen Leitungen London-
+Wien hierzu nicht mehr ausreichen Aus Anlass lebhafter Be­
+schwerden der Wiener Börsenkammer über ungewöhnliche und
+andauernde Verspätungen von Telegrammen aus London hat das
+österreichische Handelsministerium neuerdings die Ver­
+mehrung der telegraphischen Leitwege zwischen Oesterreich und
+England im Reichs-Telegraphengebiete nachgesucht.
+Der Versuch, den Bedürfnissen des gesteigerten Verkehrs
+durch intensivere Ausnutzung der vorhandenen Leitungen mit
+Hilfe des Gegensprechbetriebes, die des gleichzeitigen Tele-
+graphierens in beiden Richtungen, gerecht zu werden, hat nicht
+den gewünschten Erfolg gehabt. Einerseits konnten nur wenige
+Leitungen in den neueren, zweckmässiger construirten Kabeln
+hierzu hergerichtet werden und andererseits konnte die Methode
+nicht hinreichend ausgenutzt werden, weil die Zahl der in beiden
+Richtungen auszuwechselnden Telegramme zu den verschiedenen
+Tageszeiten sehr ungleich ist. Vormittags überwiegt der Tele­
+grammverkehr nach England, Nachmittags der von England ganz
+erheblich. Hiernach kann nur durch eine abermalige Vermehrung
+von Verbindungen Abhilfe geschaffen werden. Zu dem Zwecke
+muss ein neues, fünftes Kabel mit vier Leitungen gelegt werden,
+
+Seite 272.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Nr. 22.
+welches von Borkum auszugehen und bei Bacton (Norfolk) zu
+endigen hat. Das Kabel, dessen Herstellung und Legung im
+Einverständnis mit der englischen Telegraphenverwaltung von
+hier aus in die Wege geleitet wird, soll eine den neuesten Er­
+fahrungen und Fortschritten der Technik entsprechende Bauart
+erhalten, um es für den Mehrfachbetrieb möglichst geeignet zu
+machen. Nach dem mit der grossbritannischen Telegraphenver­
+waltung bestehenden Abkommen vom 30. October 1888 sind die
+Kosten der Beschaffung und Legung des Kabels zwischen den
+beiderseitigen Küsten durch beide Verwaltungen gemeinsam zu
+tragen, während die Anschlusslinien nach den Telegraphenanstalten
+auf Kosten desjenigen Landes allein hergestellt werden, in dessen
+Gebiet sie fallen.
+Eine Beantragung der erforderlichen Mittel durch den Etat
+für 1900 war nicht möglich, weil das Bedürfnis erst in der Mitte
+des Jahres 1899 mit voller Schärfe hervorgetreten ist und über­
+dies die grossbritannische Telegraphenverwaltung erst Mitte
+April 1900 sich mit der Kabellegung einverstanden und zur Tra­
+gung ihres Antheils an den Kosten bereit erklärt hat.
+Ausgeführte und projectirte Anlagen.
+Oesterreich-Ungarn.
+a) Oesterreich.
+Graz. (Elektrischer Betrieb, der Schlossberg­
+bahn.) Die Unternehmung dieser Drahtseilbahn beabsichtigt die
+Einführung des elektrischen Antriebes des Drahtseiles. Das
+bezügliche Uebereinkommen dürfte demnächst abgeschlossen
+werden.
+Tetsclien. (Elektrische Kleinbahn nach Bensen.)
+Das k. k. Eisenbahnministerium hat dem Advocaten Dr. Julius
+Patzowsky in Böhm.-Leipa die Bewilligung zur Vornahme
+technischer Vorarbeiten für eine mit elektrischer Kraft zu be­
+treibende normalspurige Kleinbahn von der Stadt Tetschen über
+Altstadt, Theresienau, Liebwerd, Birkigt, Zautig
+und Höflitz nach der Stadt Bensen im Sinne der bestehenden
+Normen auf die Dauer eines Jahres ertheilt.
+b) Ungarn.
+Budapest. (Technische Ueberprüfung der Buda­
+pest—Budafokerjelektrischen Vicinalbahn.) Die tech­
+nische Ueberprüfung der Budapest—Budafoker elektrischen
+Vicinalbahn wird auf Anordnung des ungarischen Handels­
+ministors am 25. Mai 1. J., vormittags 9 Uhr beginnend, unter
+Betheiligung der Interessenten und Vertreter der administrativen
+Behörden stattfinden. M.
+(Projectirter Bau einer neuen Linie der
+Stadtbahn-Gesellschaft.) Die Direction der Budapester
+Stadtbahn hat den Bau einer neuen Linie mit elektrischem Be­
+triebe durch die Mestergasse mit einem Ivostenaufwande von
+595.000 K beschlossen. Die Zuleitung des Stromes wird vorläufig
+bis zum vollständigen Aushau dieser Strasse durch Hochleitung
+erfolgen, nach Durchführung der Ordnung des Strassenkörpers
+aber, wie bei den übrigen innerstädtischen Linien, durch eine
+Untergrundleitung ersetzt werden.
+(Activirung des Kreisverkehres zwischen
+den an beidenUfern der Donau gelegenenStadt-
+bezirken der Budapester Strasseneisenbahn-
+Gesellschaft.) Die Direction der Budapester Strassen-
+eisenbahn-Gesellschaft hat, vorbehaltlich der oberbehördlichen
+Genehmigung, die Einführung eines Kreisverkehres zwischen
+ihren Pester und Ofner Betriebslinien, sowie eine mit diesem
+Dienste verbundene Ermässigung der gegenwärtigen Fahrpreise
+beschlossen. Der diesbezügliche Fahrplan beruht auf der Theilung
+des Verkehres zwischen der Magarethen- und der Franz Josef-
+Brücke in der Weise, dass im Interesse des in verschiedenen
+Relationen verkehrenden Publicums die Züge in beiden Rich­
+tungen abwechselnd über beide Brücken verkehren. Der Fahr­
+preis für die weiteste, circa 8 km messende Strecke Köhänia
+(Steinbruch)—Zugliget (Auwinkel) ist mit 50 h (gegenwärtig 65 h)
+bemessen. Der Kreisverkehr wird auch dadurch an Ausdehnung
+gewinnen und dem fahrenden Publicum Bequemlichkeiten bieten,
+dass v/eitere neue Umsteigstationen in 25 Relationen des eigenen
+Netzes creirt wurden, wodurch auch eine mehrortige Verbindung
+mit dem Netze der Stadtbahn-Gesellschaft gefördert wird.
+(T echnisch-polizeiliche Begehung und Er"
+Öffnung der zum Mattoni’schen Elisabeth-
+Salz b ad führenden Linie.) Am 29. April fand unter
+Führung des Sectionsrathes Arpäd Papp des kgl. ungar. Handels­
+ministeriums und mit Beiziehung der Vertreter der interessirten
+Staats-, Comitats- und Communalbehörden die technisch-polizei­
+liche Begehung der von der Direction der Budapester Strassen-
+eisenbahn-Gesellschaft erbauten neuen Linie zum Mattoni’schen
+Elisabeth-Salzbad statt. Die auf elektrischen Betrieb (Hochleitung)
+eingerichtete Linie, welche im Bereiche des rechtsuferseitigen
+städtischen Gebietes nächst Kelenföld von der gesellschaftlichen
+Linie Franz Josef-Brücke—Kelenföld—Teteny abzweigt und bis
+zum Badeetablissement führt, verspricht den Verkehr der Haupt­
+linie durch den Zuwachs jener Curgäste, welche bisher auf den
+Omnibus- und Lohnwagenverkehr angewiesen waren, umsomehr
+zu heben, als dieser ziemlich weit excentrisch gelegene Curort
+durch die Continuität des. Wechselverkehres (im Ümsteigdienste)
+zwischen den beiden Budapester Strasseneisenbahn-Unternehmungen
+nunmehr allen Stadtbezirken erschlossen ist. Nachdem die Com­
+mission den Bauzustand und die Betriebseinrichtung der neuen
+Linie als entsprechend befand, wurde die sofortige Eröffnung des
+Verkehres ex commissione bewilligt.
+(Fahrpr eiserm ässigung im Umsteigeverkehr
+der Budapester Strasseneisenbahnon und Buda­
+pester Stadtbahn.) Die Directionen der Budapester
+Strasseneisenbahnen, sowie jene der Budapester Stadtbahn sind
+im gegenseitigen Einvernehmen bei der hauptstädtischen Com-
+munalverwaltung (welcher das Recht der Bemessung und der
+Genehmigung der Tarife der Strasseneisenbahn-Unternehmungen
+Vorbehalten ist) um Erstellung ermässigter Fahrpreise im Um­
+steigeverkehr zwischen den Linien ihrer Netze in einzelnen
+Relationen, und speciell zwischen den Linien der Pester und
+Ofener Brücke, eingeschritten. Diesem Ansuchen hat sich nun
+auch die Direction der Vorortebahn Budapest—Uj-Pest- Rakos-
+Palota angeschlossen, wodurch der Umfang des hauptstädtischen
+Verkehres im Interesse des fahrenden Publicums eine weitere
+Ausdehnung gewinnen wird.
+(Projectirte Untergrundbahn „Metropoli­
+tan“ in Budapest.) Der Leiter des kgl. ungar. Ministeriums
+des Innern hat in Angelegenheit des Ausbaues einer „Metro­
+politan“ genannten Untergrundbahn in Budapest ein ausführlich,
+motivirtes Rescript an die Budapester hauptstädtische Municipal-
+verwaltung gerichtet, in welchem er das System der Unter­
+grundbahnen im Principe allerdings als das Ideal grossstädtischer
+Massenverkehrsanstalten anerkennt, die Anlage derselben aber
+nicht als schablonenmässig allerorts anwendbar bezeichnet, da
+die Möglichkeit oder doch die Zulässigkeit der Anlage derartiger
+Bahnen in erster Linie von localen Verhältnissen aller Art
+abhängt, die, wenn sie auch die Anlage von „Unterpflasterbahnen“'
+unter beiden Strassenzügen gestatten sollten, doch nicht den Bau
+von „Untergrundbahnen“ in Tunnels mit Unterfahrung von
+Häuserblocks etc. als zulässig erscheinen lassen. Der Minister
+erörtert zunächst die Zweckmässigkeit von Untergrundbahnen für
+die Budapester speciellen Verhältnisse und gelangt zu dem
+Schlüsse, dass das Terrain stellenweise für diese Eisenbahnen
+nicht geeignet sei. Trotzdem ist er— im Einvernehmen mit dem
+Handelsminister— nicht abgeneigt, die Benützung des städtischen
+Terrains zu genehmigen, wenn einige Vorfragen gründlich geklärt
+werden. Der Handelsminister bezeichnet nämlich die projectirte
+Führung der Trace durch einen Tunnel für technisch unstatt­
+haft, da der Bau eines Tunnels und die Erschütterung durch den
+Zugsverkehr die Bauten, zumal wenn sie schwach fundamentirt
+sind, leicht gefährden könne. Von besonderer Wichtigkeit ist
+ferner die Lösung der privatrechtlichen Fragen. Die Trace wird
+unter zahlreichen Gassen geführt, welche für die Anlage eines
+Tunnels zu schmal sind. Selbstverständlich muss, um die erforder­
+liche Breite zu gewinnen, der Tunnel zum Theil unterhalb der
+Häuserreihen angelegt werden. Der Minister fordert nun, die
+Stadtbehörde möge zuerst mit den interessirten Hausbesitzern
+über das Recht der Terrainbenützung Vereinbarungen treffen und
+ihm erst dann die Angelegenheit neuerdings unterbreiten, erklärt
+aber schon jetzt ausdrücklich, dass die Regierung für etwaige
+durch die Anlage der Metropolitanbahn entstehende Schäden 1
+keinerlei Verantwortlichkeit übernehme. Schliesslich gibt er der
+Ueberzeugung Ausdruck, dass bei sorgfältiger Prüfung der
+localen Verhältnisse dennoch eine Trace gefunden werden könnte,
+deren Ausfiihrbahrkeit im Sinne des Vorhergesagten sich als
+zulässig erweisen dürfte.
+Giins (Köszeg). (Eisenbahnproj e c t.) Der kgl. ungar.
+Handelsminister hat dem k. u. Catastral-Ingenieur i. P. Ignaz.
+Beneseh die Bewilligung für eine von der Endstation Köszeg
+(Giins) der im Betriebe der Siidbahn stehenden Localbahn
+Szombathely (Steinamanger)—K öszeg abzweigende, über
+R e n d e g, II amor, Leka und Pergelen bis zur ungarisch-
+österreichischen Landesgrenze führende normalspurige Localbahn
+auf die Dauer eines Jahres ertheilt.
+
+Nr. 22.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Seite 273.
+Kakamaz (Comitat Szabolcs). (E i s e n b a h n p r o j e c t.)
+Der kgl. Ungar. Handelsminister Lat der Firma Ungarische
+Eisenbahnverkehrs-Actiengesellschaft („Magyar
+vasuti forgalmi reszvcnytärsasäg“) in Budapest die Bewilligung
+zur Vornahme technischer Vorarbeiten für eine
+a) von der Station Rakamaz der Linie Szerencs—Debroczon der
+kgl. Ungarischen Staatsbahnen abzweigende, über Timer
+und weiterhin über Szabolcs im Bereiche des Comitates
+Szabolcs über Balsa, V e n c s e 11 ö, G ä v a und B u j bis
+I b r ä n y,
+b) von der zukünftigen Station I b r a n y der Linie a) aus­
+gehende, einerseits über N a g y- H a 1 ä s z bis Domb r ä d,
+c) andererseits über Kötaj bis Söstö ftirdö
+führende schmalspurige Localbahn mit elektrischem, eventuell
+Dampfbetrieb, auf die Dauer eines Jahres ortheilt. (Vergl. H. 19,
+S. 237.)
+Rosenau (ltozsnyö). (Eisenbalinproj o ct.) Der
+kgl. ungar. Handelsminister hat der Firma Sajötothaler
+Actieng. esellschaft für elektrische Anlagen
+(„Sajövölgyi vilhimosagi reszveny tärsasag“) in Kozsnyö die Be­
+willigung zur Vornahme technischer Vorarbeiten für eine von
+der Station Rozsnyo (Comitat Gömor) der Localbahn Bänreve-
+Rozsnyo-Dobsina der kgl. Ungarischen Staatsbahnen abzweigende,
+über J ö 1 e s z und Krasza-Horka— V ä r a 1 j a, eventuell
+über Krasza-Horka-Hosszuret und weiterhin über
+D e r n ö und die Gemarkung der Gemeinde K o v ä c s v ä g ä s
+bis Lucska (Comitat Torna) führende schmalspurige Local-
+balm mit elektrischem Betriebe auf die Dauer eines Jahres ertheilt.
+(Vergl. H. 19, S. 237.)
+Werschetz (Versecz).' (Eisenbahnproj ect.) Der
+kgl. Ungar. Handelsminister hat der Firma Actiengesell-
+schaft für elektrische Einrichtungen und Ver­
+kehrs Unternehmungen („Reszvenytärsasäg villimos es
+közlekedösi vällalaltok“) in Budapest die Bewilligung zur Vor­
+nahme technischer Vorarbeiten für eine von der Station
+V e rsecz der Linie Temesvar-Jozsefväros—Bäziäs der königl.
+ungarischen Staatsbahnon, der ungarischen Südostbahn, sowie
+der Linie Versecz— Kubin-Dunapart (Donau-Umschlag) aus­
+gehende, mit Benützung entsprechender Strassenzüge der Stadt
+Vorsecz im Bereiche der Temesvärer Hauptstrasse bis zu den
+Verseczer städtischen Elektricitätswerken führende normalspurige
+Strasseneisenbahn mit elektrischem Betriebe auf die Dauer eines
+Jahres ertheilt. (Vergl. H. 19, S. 237.)
+Deutschlan d.
+Freiburg i. B. (Elektrische Bahnen.) Der Stadtrath
+in Freiburg i. B. hat beschlossen, das zu erbauende Elektricitäts-
+werk und die elektrischen Strassenbalmen der Siemens&
+II a 1 s k e Act.-Ges. zu übertragen.
+Nürnberg. (Elektrische Centrale.) Der Magistrat der
+Stadt Nürnberg beschloss, Pläne und Kostenanschläge für den
+Versuch eines Regiebetriebes auf einer längeren Strassenbahn-
+strecko ausarbeiten zu lassen.— Die Theilstrecke einer von der
+C o n ti n on t al en Gesellschaft für elektrische Unter­
+nehmungen abgelohnton Linie wurde der Nürnberg-Fürthor
+Strassenbahn-Gesollschaft concessionirt.
+Patentnachrichten.
+& Aufgebote.
+Patentclaase. IV i e n, am 15. Mai 1900.
+20. Sacek Johann, Constructeur in Zizkow, und Bachmayr
+Josef, Privatier in Wien.— Schaltungsanordnung
+für vom Zuge bet hätigte W e g Übersetzungs-
+Läutewerke: Als Schienendurchbiegungscontacte. ausge­
+bildete Streckenstromschliesser und Unterbrecher sind mit
+einem Relais derart zusammengeschaltet, dass beim Befahren
+des Stromschliessers zwei Stromkreise geschlossen werden, von
+welchen der eine das Läutewerk enthält, während der andere
+über den Unterbrechungscontact geht und bis zur Bethätigung
+diesos letzteren den Relaisanker in der zur Function des
+Läutewerkes erforderlichen Stellung hält.— Angemeldet am
+22. August 1899.
+— Westinghouse George, Ingenieur in Pittsburgh (V. St.
+v. A.).— Elektrisch-pneumatische Vorrich­
+tungen zur Regelung der Bewegung von Mo­
+toren: Zum Zwecke der gleichzeitigen Verstellung mehrerer
+Controller, Um- und Ausschalter wird Druckluft benützt, deren
+Regelung durch Elektromagnete, welche Doppelventile bethä-
+tigen, erfolgt. Der Erfindungsgegenstand umfasst spociello
+Patentclasae.
+Einrichtungen zur Vorstellung der Controller, Um- und Aus­
+schalter. Die Controller können schrittweise in einer Richtung
+und in einem einzigen Schritte in entgegengesetzter Richtung
+gedroht werden. Die Stufen, in welchen die schrittweise Be­
+wegung erfolgt, sind ungleich. Die Einleitung der Bewegung
+der Controller erfolgt durch Verstellung einer kleinen Hand­
+kurbel aus ihrer Normallage nach rechts oder links, wobei
+diese Handkurbel, wenn eine Verstellung der Controller er­
+folgt ist, infolge der Wirkung von Druckluftcylindern stets
+in ihre Normallage zurückgedreht wird. Bei Verstellung der
+Umschalter werden die Controller zwangsweise in die Ruhe­
+stellung zurückgeführt. Wenn die Wagenbremsen mit Druck­
+luft bethätigt werden, so werden gleichzeitig infolge der
+Wirkung von Druckluftcylindern dio Ausschalter in die Unter­
+brechungsstellung und die Controller in die Ruhestellung ge­
+dreht.— Angomeldet am 2. Februar 1899.
+20 a. Polläk Anton, Elektrotechniker in Budapest, und Vor-
+einigtoElektricitäts-Action- Gesellschaft in
+Budapest.— Körnermikrophon: Die in das Kohlen­
+pulver eingobettete zweite Elektrode aus Kohle bildet einen
+in horizontaler Richtung längeren, in verticalor Richtung
+schmäleren Streifen.— Angemeldet am 14. November 1899
+mit der Priorität des D. R. P. Nr. 107.976, d. i. vom 13. Fe­
+bruar 1899.
+21 b. Kölner Accumulatoren-Werke Gottfried
+Hagen, Firma in Kalk bei Köln.— Verfahren z u r
+Herstellung von Grossober flächen -Platten
+für elektrische Sammler: Dio ursprünglich parallelen
+Rippen der Platten werden mittelst eines Schneidwerkzeuges
+in bestimmten Abständen durchschnitten, so dass sio sich nach
+verschiedenen Seiten verbiegen, zu dem Zwecke, ein leichteres
+Entweichen der Gase zu ermöglichen.— Angeinoldet am
+4. August 1899.
+21 d. von Kando Koloman, Chef-Ingenieur in Budapest.—
+Einrichtung zur Verringerung der Quo r-
+induction von Dynamo a n k ern: Die Polkörner er­
+halten ein keilförmiges Profil und werden gleichzeitig mit
+keilförmig oder parallel geführten Einschnitten von ver­
+schiedener Tiefe oder mit Oeffnungen versehen, welche gegon
+das Ende der Polschuhe zu entweder grösser dimensionirt
+oder dichter angeordnet sind.— Angemeldet am 15. Mai 1899.
+Entscheidungen.
+Privilegienwesen.
+Entscheidung des Handelsministeriums vom
+17. Novembe r 1899, Z. 5.289.
+Wird Jemand wegen, an verschiedenen Orten begangener
+Eingriffe in ein Privilegium bei mehreren politischen Behörden
+erster Instanz verfolgt, so ist— in analoger Anwendung dos
+§ 56 St. P. O.— das Strafverfahren bei derjenigen dieser Behörden
+zu führen, welche der anderen zuvor gekommen ist.
+Bei der Verfolgung eines strafbaren Privilegien-Eingriffes
+ist es nicht erforderlich, dass dio Bestrafung der besonderen Ein­
+griffsart (§ 38 a, b oder c Priv.-Ges.) begehrt wird.
+Eine von Amtswegen zu berücksichtigende Vorfragc im
+Sinne des§ 43, Abs. Priv.-Ges. kann nur dann als auf­
+geworfen angesehen werden, wenn mit Bestimmtheit vorliegt, dass
+der Beschuldigte gewillt ist, zur Lösung dieser civilrechtlichon
+Vorfrage die Klägerrollo zu übernehmen.
+Der im§ 37 Vollz. Vorschr. zum Priv.-Ges. vorgeschriebene
+Uebereinkommensversuch betrifft nicht die vergleichsweise Ab­
+schaffung des Strittes, sondern blos die Ueberlassung der Ein­
+griffs-Werkzeuge und -Gegenstände.
+Nachträgliche Beibringung der zur Rechtfertigung
+einer Augenscheins-Anordnung nach§ 44 Priv.-Ges. erforderlichen
+Bescheinigung.
+Im" administrativen Privilegien- Eingriffsstreit steht den
+Parteien ein Einfluss auf die Ernennung der Sachverständigen
+nicht zu.
+Mündlichkeit im Ei'ngriffsverfahren.
+Da die Uebertretungdes Privilegien-Eingriffes eino Dauer­
+handlung ist, so beginnt die Verjährung derselben erst zu
+laufen, bis der gewerbsmässige Verschleiss oder die Aufbewahrung
+oder Ausstellung ihr Ende gefunden haben.
+Ein Eingriff in ein Privilegium mit offener Beschreibung
+ist strafbar, wenn auch die verlautbarte Offenerklärung dem
+Beschuldigten nicht besonders zur Kenntnis gelangt sein mag.
+Kostenzuspruch im Privilegien-Eingriffsstreit.
+
+Seite 274.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Nr. 22.
+Patentrecht.
+Entscheidung des Patentamtes (Anm. Abth. III)
+vom 27. März 1900, Z. 452.
+Die Zurückziehung einer Anmeldung nach erhobenem Ein­
+sprüche hat nicht unbedingt die Verfüllung des Anmelders zum
+Ersätze der Kosten dos Einspruchsverfahrens zur Folge (8 61
+P. G-.).
+Eine Prüfung, ob die in dem Einsprüche geltend gemachten
+Thatsachen zu oiner Versagung des Patentes hätten führen können,
+ist in diesem Falle nicht ausgeschlossen.
+Ein Einspruch gegen eine, die Umwandlung eines Privi­
+legiums in ein Patent bezweckende Anmeldung ist nicht als ein
+zur zweckmässigen Rechtsverfolgung nothwcndiger Schritt anzu­
+sehen, wenn bereits vor der Erhebung des Einspruches gegen
+das zur Umwandlung angemeldete Privilegium beim Handels­
+ministerium eine Anfechtungsklage anhängig gemacht worden
+war, derzufolge über Anzeige das Umwandlungsverfahren sofort
+ausgesetzt werden musste.
+Unlauterer Wettbewerb.
+Entscheidung dos Obersten Gerichtshofes vom
+20. Februar 1900, Z. 2.542.
+Wenn auf einer Geschäftstafel eine protokollirto Firma in
+einer, gegen§ 20, Abs. 1 H. G. verstossonden A b k ii r z u n g
+gebraucht wird, so hört dieser Gebrauch dadurch, dass an an­
+dere r Stelle die volle Firma ersichtlich gemacht wird, nicht
+auf, gesetzwidrig zu sein.
+Zuständigkeit des Gerichtes nach§ 26 II. G. und der
+Gewerbobehördo nach§ 44—47 Gew.-Ordg.
+Mitgetheilt von Ingenieur
+Victor Monath,
+WIEN, I. J asomirgottstra ss e Nr. 4.
+Liste der jüngst ertheilten österreichischen Patente.
+Classe.
+12 a. Pat.-Nr. 1285. Elektrolytischer Wasserzersetzungs-Apparat.—
+Max Ulrich Schoop, Ober-Ingenieur in Hirschwang. 15./1. 1900.
+36b.Pat.-Nr. 1270. Elektrischer Gaswärmer.— Dimitris T'scher-
+noff, Elektriker in St. Petersburg. 15./1. 1900.
+42. Pat.-Nr. 1271. Elektrische Auslösevorrichtung für Selbstcassirer,
+— Max Hey der, Fabrikant in Saalfeld a. d. Saale, l./l. 1900.
+Auszüge aus Patentschriften.
+Friedrich Egger in Venloo (Holland).— Lösbare Fassung
+für Glühlampen.— Classe 21, Nr. 105.882 vom 27. Februar 1897.
+Die Fassung der Glühlampe ist dadurch lösbar eingerichtet,
+dass zur Verbindung dos Sockels c mit der Birne a durch Löcher
+des Sockels Stifte e gestockt worden, welche in entsprechende
+Einkerbungen b der Birne eingroifon. (Fig. 1)
+Siemens& Halskc, Actjen-Gesellschäft in Berlin.— Yorrich-
+lung an elektrischen Messgeräthcn zur Verringerung der
+durch mechanische Reibung entstehenden Fehler.— Classe 21,
+Nr. 105.845 vom 16. October 1898.
+Um die schädliche Wirkung der Reibung zu vermindern,
+werden entweder die schwingenden oder umlaufenden Theile oder
+ihre Lager durch einen besonderen Elektromagneten solbstthätig
+iii kleine Schwingungen vorsetzt. (Fig. 2.)
+F. R. Dietze in Coswig b. Dresden.— Anlass widerstand für
+Nebenschlussmotoren.— Classe 21, Nr. 105.035 vom 1. Oc­
+tober 1898.
+Der Anker ist an das eine Ende des Widerstandes, die
+Feldmagnetwickelung aber an einen zwischen den Enden des
+Widerstandes gelegenen Punkt angeschlossen. Zwoi mit der einen
+Stromzuführung verbundene Kurbeln A und B schleifen auf dem
+Widerstand. Die eine B bestreicht den ganzen Widerstand,
+während die andere A am Abzweigspunkt dos Nebenschlusses
+durch einen festen Anschlag c an der Weiterbowegung gehindert
+und bei Rückbewegung der ersten Kurbel durch einen an dieser
+angebrachten Anschlag zurückgeführt wird. (Fig. 3.)
+Reiniger, Gebbert& Schall in Erlangen.— Einrichtung zur
+Erzeugung hochgespannten Gleichstromes.— Classe 21,
+Nr. 105.938 vom 23. Juni 1898.
+Die Spulen des Ankers x einer gewöhnlichen Gleichstrom­
+maschine werden einzeln mit don Primärspulen p mit rotirenden
+Transformatoren T hintereinander geschaltet, doren Secundär-
+spulen w mit don Stegen eines den hochgespannten secundären
+Wechselstrom gleichrichtenden Stromwenders K verbunden sind.
+Hierdurch werden allzu hohe Spannung,sdifferenzen zwischen den
+benachbarten Stegen des Hochspannungsstromwenders vermieden.
+(Fig. 4.)
+Fig. 5.
+Elektricitäts-Gesellschaft vorm. Lalimeyer& Co. in Frank­
+furt a./M.— Elektromagnet mit federnd gelagertem Schluss­
+stück.— Classe 21, Nr. 105.907 vom 5. Jänner 1899.
+Um bei Topfmagneten die durch das Aufprallen des Kernes
+gegen den Boden hervorgerufenen Stösse zu vermeiden, wird ein
+federnd gelagertes Schlussstück a angeordnet, welches einen
+Theil des magnetischen Kreises bildet, und gegen welches der
+Kern schlägt. (Fig. 5.)
+Siemens& Halske, Actien-Gesellschaft in Berlin.— Steuerung
+sämmtlicher Motoren eines mit Drehstrom betriebenen Eisen-
+balinzuges von einem Funkte des Zuges aus.— Classc 20,
+Nr. 105.968 vom 2. August 1898.
+Fig. 6.
+-4i A.2 sind die beiden ersten Wagen eines Eisenbahnzuges,
+in welchem die Achsen der einzelnen Wagon durch die Dreh­
+strommotoren Bi B- R3 u. s w. angetrieben werden. In dom indu-
+cirten Thoilo der Motoren sind "die Widerstände ln ]ß u. s. w.
+eingeschaltet. Die Fcldmagnete sämmtlicher Motoren sind an die
+durchlaufenden Leitungen a angeschlossen; b sind Leitungs­
+kuppelungen. Zur gleichzeitigen Regelung der den sämmtlichen
+Motoren zugeführten Spannung dient ein beim Zugführer auf-
+gestellter Spannungsregler C beliebiger Art. Z. B. kann die
+gegenseitige räumliche Lage von Primär- und Secundänvicke-
+lungon geändert werden, wie dies bei dem den Gegenstand des
+Patentes 105.271 bildenden drehbaren Regulirtransformator der
+Fall ist. (Fig. 6.)
+
+Nr. 22.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Seite 275.
+Geschäftliche und finanzielle Nachrichten.
+Betrieb seriell nisse der Franz Josef elektrischen Unter­
+grundbahn im Jahre 1899. Auf der Franz Josef elektrischen
+Untergrundbahn in Budapest wurden im Jahre 1899 zusammen
+921 052-94 Wagenkilometer geleistet und 3,062.470 Personen
+befördert (im Vorjahre 949.821-38, resp. 3,259.014). Die Ein­
+nahmen aus dem Personenverkehre betrugen, mit Hinzurechnung
+der Abonnementskarten, 293.784 fl. (im Vorjahre 328.371 fl.). Die
+sonstigen Einnahmen bezifferten sich mit 12.432 fl., daher waren die
+Gesammteinnahmen 306.216 fl. Die Ausgaben waren: Betriebs­
+ausgaben 225.505 fl., sonstige Ausgaben 14.324 H., zusammen
+239(829 fl. Ueberschuss 66.388 fl. Mit Berücksichtigung des
+8416 fl. betragenden Uebertrages vom Vorjahre und nach Abzug
+der für Amortisation von Actien verwendeten 2500 fl. und des
+dom Erneuerungsfonds zugewendeten Betrages von 1500 fl.
+erübrigte ein verfügbarer Ueberschuss von 70.803 fl. Die am
+14. April stattgefundeno Generalversammlung hat von diesem
+Betrage 6000 fl. als Provision der Direction, und 1000 fl. als
+Dotation des ordentlichen Reservefonds verwendet; ferner be­
+stimmt, dass nach den 35.954 Stück noch im Umlauf befindlichen
+Actien per 100 fl. nominell eine Dividende von l 3/ 4 Percent
+erfolgt und der nach den hiezu erforderlichen 62.919 fl. ver­
+bleibende Rest per 884 fl.= 1768 Kronen auf die Rechnung des
+Jahres 1900 übertragen werde. Das Actiencapital des Unter­
+nehmens beträgt 3,600.000 fl., wovon 4600 fl. bereits getilgt sind.
+Die Budapest-Umgehung elektrische Strassenbahngesell-
+schaft hat in ihrer am 20. April a. c. abgehaltenen Generalver­
+sammlung- den Rechnungsabschluss pro 1899 genehmigt. Diesem
+nach haben die Betriebseinnahmen 74.561 K, die Betriebs­
+ausgaben hingegen 68.337 K betragen, daher sich ein Be­
+triebsüberschuss von 6224 K ergab. Mit Hinzurechnung
+des Uebertrages vom Vorjahre per 1518 K, und abzüglich ^der
+6150 K betragenden Provisionen erübrigte ein verfügbarer Rest
+von 1592 Iv, welcher Betrag auf das Jahr 1900 übertragen wurde.
+Das Actiencapital beträgt 2,448.000 K, wovon aber noch
+817.600 K in Actien im Portefeuille liegen. M.
+„Elektrische Beleuchtungsgesellschaft für die Gemeinde
+Erzsehetfalva“. „Die Ungarische Eisenbahn-Ver­
+kehrsgesellschaft“ hat die elektrische Beleuchtung der
+Gemeinde Erzsebetfalva in der Nähe der Hauptstadt über­
+nommen und gedenkt zu diesem Behufe eine Actiengesellschaft
+unter obiger Firma zu gründen, die sich schon demnächst mit
+einem Capitale von 600.000 K constituiren wird. Dieselbe wird
+auch die elektrische Kraft an das Kleingewerbe, besonders aber
+an die durch sie dortselbst bereits gegründete „I n d u s t r i e-
+Heimstätten-Actiengesellschaft“ abgeben.
+„Fulmen-Actiengesellschaft für elektrische und Ver­
+kehrsunternehmungen“. Wie dem „L. Schönberger’s Börsen-
+und Handels-Ber.“ mitgetheilt wird, beabsichtigt die Elektri­
+sche Trustgesellschaft in Budapest ihre Firma in die
+vorstehend bezeichnete abzuändern. Diese Gesellschaft hat bereits
+in dreizehn ungarischen Städten 'elektrische Bahnen und Be­
+leuchtungsanlagen errichtet und steht gegenwärtig mit weiteren
+drei Gemeindevertretungen wegen solcher Anlagen in Unter­
+handlung.
+Mähriscli-Ostrauer Elektricitäts-A.-G. Die von der Firma
+Ganz& Co. in Budapest gegründete Mährisch-Ostrauer Elek-
+tricitäts-Aetiengesellschaft, worüber wir bereits im H. 20, S. 250,
+berichtet haben, hielt am 15. d. M. ihre constituirende General­
+versammlung ab, in der General-Director Emil Asboth zum
+Präsidenten und die Herren Dr. Max Bo eh m, Armin Hart mann,
+Dr. Gustav Friedler, Gustav Ko egler, Dr. Ignaz Korn­
+feld und Carl Richter zu Mitgliedern des Verwaltungsrathes
+gewählt wurden.
+Elektra, Actiengesellschaft in Dresden. Der Rechen­
+schaftsbericht pro 1899 betont, dass die Verschlechterung des
+Geldmarktes und der Umschwung in der Meinung des anlage­
+suchenden Publicums hinsichtlich elektrischer Unternehmungs­
+gesellschaften, der sich im abgelaufenen Geschäftsjahre vollzog,
+auch die Zurückhaltung und Vorsicht der Verwaltung in dei
+Verfolgung neuer Unternehmungen erhöht hat, und es zweck­
+mässig erscheinen liess, eine ganze Reihe, selbst, grösserer Ge­
+schäfte abzulehnen, die unter anderen Verhältnissen als vei-
+folgungswerth erschienen wären. Können die Unternehmungs­
+gesellschaften der elektrischen Industrie, wie jedem Einsichtsvollen
+stets klar sein musste, auf sprunghaft an wachsende. Erträgnisse
+auch niemals rechnen, so sind sie doch vor plötzlichen Rück­
+schlägen bei geänderten Conjuncturen gesichert, wofern sie bei
+der Auswahl ihrer Geschäfte und bei der Festsetzung der Be­
+dingungen, unter denen sie dieselben abgeschlossen haben, nur die
+erforderliche Vorsicht haben walten lassen. Solche Unternehmungen
+zeigen dann mit wenigen Ausnahmen fast durchgängig eine stetige,
+wenn auch langsamer fortschreitende Entwickelung, als. man
+früher anzunehmen geneigt war und werden, namentlich bei ent­
+sprechend langer Concessionsdauer, über kurz oder lang- Anlage-
+werthe bilden, die vom Publicum gesucht oder begehrt sein werden.
+Ueber die einzelnen Unternehmungen der Gesellschaft berichtet
+die Verwaltung, dass die Z w i c k a u e r E1 e k t r i c i t ä t s w e r k-
+„nd Strass enbahn-Actien-Ges eil'Schaft, deren
+Actien zum grössten Theil in Händen der Gesellschaft, sich be­
+finden, sich auch im abgelaufenen Geschäftsjahr in erfreulicher
+Weise weiter entwickelt hat, so dass bei gleichen Rückstellungen
+eine höhere Dividende, 43/4 gegen 4i/ 2 im Vorjahre, zur
+Vertheilung gelangen konnte. Die Frequenz der Strassenbahn
+stieg von 1,615.127 im Jahre 1898 auf 1,785.313 zahlende Personen
+im Jahre 1899, während die Instalaltionswerthe des Licht- und
+Kraftwerkes in der gleichen Zeit von 3786 Hektowatt auf ol80
+Hektowatt angewachsen sind. Die Hauptlinie der Strassenbahn
+wurde von Schedewitz bis nach Wilkau verlängert,
+doch konnte in Folge behördlicher Vorschriften erst anfangs 1900
+eine Theilstrecke bis C a i n s d o r f in Betrieb genommen werden.
+Bis Pfingsten dürfte die ganze Linie befahren werden können.
+Von den übrigen geplanten Erweiterungen des Bahnnetzes ist
+für die Linie nach Pölbitz inzwischen die Genehmigung ein­
+getroffen, und wird mit dem Bau demnächst begonnen werden.
+Die Strassenbahn von Schandau nach dem Lichten-
+hainer Wasserfall in der Sächsischen Schweiz hat in dem
+abgelaufenen Jahre gegenüber dem vergangenen eine Frequenz-
+steigerung von etwa 20°/o gezeigt. Für die beabsichtigte Ver­
+längerung der Bahn von der Stadt Schandau nach dem auf der
+anderen Seite der Elbe gelegenen Bahnhof ist inzwischen die
+Genehmigung in Aussicht gestellt. Die Verwaltung hofft diese
+Linie, von der eine wesentliche Verbesserung auch der Stamm­
+linie zu erwarten ist, bis zum Frühjahre nächsten Jahres in
+Betrieb setzen zu können. Wegen der Beleuchtung der Stadt
+Schandau konnten die Verhandlungen noch nicht zum Abschluss
+gebracht werden. Das Elektricitätswerk und die
+Strassenbahn in Mühlhausen i. T h ii r. hat nicht ganz
+den Erwartungen entsprochen, die man an dieselben zu knüpfen
+berechtigt war. In der Hauptsache ist dies darauf. zuriiekzu-
+füliren, dass die Benützungsdauer der an das Elektricitätswerk
+angeschlossenen Lampen eine geringere gewesen ist, wie in irgend
+einem anderen der Betriebe. Die Gesellschaft ist vor Ausfällen
+jedoch nicht nur durch eine Zinsgarantie Seitens der Firma
+Schuckert& Co. gedeckt, die 40/q Zinsen nach angemessenen
+Rückstellungen gewährleistet, auch die Entwickelung des Werkes
+schreitet immerhin so erheblich weiter, dass ein Ausgleich für
+die erwähnte geringe Benützungsdauer der angeschlossenen
+Lampen zu erhoffen ist. Bei Inbetriebsetzung des Dichtwerkes,
+Anfangs 1899, war ein Lampen-Aequivalent von 3386 16kerzigen
+Glühlampen angeschlossen, das sich im Laufe dieses Jahres auf
+6102 Lampen, also um 80 (, /o erhöht hat. Die Frequenz dei
+Strassenbahn betrug im Jahre 1899 846.773 Personen.— Das
+Elektricitätswerk in Grossröhrsdorf m Sachsen, an dem
+die „Elektra“ mit einem geringen Betrage bothoiligt ist, konnte
+Anfangs I960 in Betrieb genommen werden und hat seitdem in­
+sofern eine Erweiterung erfahren, als auch für die Nachbar­
+gemeinde Bretnig (3000 Einwohner) Strom abgegeben wird.
+Insgesammt ist an das Werk ein Lampen-Aequivalent von etwa
+4000 Normal-Lampen angeschlossen.— Das Elektricitätswerk in
+Ilmenau i. Thür, konnte schon mit Endo 1899 in Betrieb
+genommen werden, obwohl der Bau erst Anfangs Juni begonnen
+Wurde. Der ungünstigen Witterung wegen mussten jedoch einige
+nebensächliche Arbeiten auf den Frühling dieses Jahres ver­
+schoben werden. Die gesammte Fertigstellung ist für die aller­
+nächste Zeit zu erwarten. An das Werk ist derzeit em Aequi-
+valent von rund 3500 Normal-Lampen angeschlossen.— Nach
+Ueberwindung zahlreicher Schwierigkeiten konnte der Bau der
+Berg-Schwebebahn von L o s c h w i t z nach den Rochwitzcr
+Höhen bei Dresden endlich in Angriff genommen werden. Der­
+selbe wird im laufenden Jahre noch zu Ende geführt werden.
+Um eine bessero Ausnützung dieser Anlage zu ermöglichen,
+wurde auch ein Vertrag mit der Gemeinde Loschwitz verabredet,
+der der Gesellschaft die Abgabe von Elektricität für Lieht- und
+Kraftzwecke in einem grosson Thoile von Loschwitz sichert. Die
+E.-A.-G. vorm. Schuckort& C o., Zweigniederlassung Leipzig,
+hatte mit der Gemeindo Oelsnitz i. Erzgeb. einen Vertrag
+wegen Versorgung dieses Ortes mit Elektricität aus einem dei
+Gewerkschaft „Deutschland“ daselbst gehörigen und gleichfalls
+von der Firma Schuckert& Co. erbauten Werke abge-
+goschlossen. Die „Elektra“ ist in die entsprechenden Verträge
+
+Seite 276.
+ZEITSCHRIFT FÜR ELEKTROTECHNIK.
+Nr. 22.
+sowohl mit Oelsnitz, als der Gewerkschaft „Deutschland“ ein­
+getreten, hat aber gleichzeitig- beschlossen, eine Ueberland-Centrale
+grossen Stiles in Oelsnitz mitten im Kohlengebiet und direct
+neben dem Schachte der Gewerkschaft „Deutschland“ zu er­
+richten, aus der nicht nur die Gemeinde Oelsnitz, sondern die
+ganze Gegend in einem grösseren Umkreise mit Elektricität.
+versorgt werden könnte. Demzufolge wurden zunächst mit 11
+Gemeinden, und zwar mit den Orten, bezw. Städten: Aue,
+C a 11 n b e r g, Hartenstein, Hohndorf, L ö s s n i t z,
+Lngau, Nieder Würschnitz, Oelsnitz, Thierfeld,
+Wildenfels und Zschocken mit insgesammt 65.000 Ein­
+wohnern Verträge wegen Versorgung derselben mit Elektricität
+abgeschlossen, bezw. verabredet. Mit einer ganzen Reihe an­
+derer Gemeinden ist die „Elektra“ noch in Verhandlungen. In
+den Orten Lugau und Lössnitz hatten Elektricitätswerke schon
+bestanden. Die Gesellschaft hat dieselben käuflich erworben und
+wird deren Netze an die Oelsnitzer Centrale anschliessen. In­
+zwischen werden dieselben als Gleichstrom-Centralen weiter be­
+trieben, während in Oelsnitz bis zur Fertigstellung der grossen
+Ueberland-Centrale, die im Laufe dieses Jahres in Betrieb ge­
+nommen werden dürfte, Strom von der Gewerkschaft „Deutsch­
+land“ geliefert wird. Insgesainmt ist bis jetzt ein Aequivalent
+von 8000 Lampen installirt. Bis zum Zeitpunkte der Inbetrieb­
+nahme der Ueberland-Centrale hofft die Verwaltung auf ein
+Aequivalent von ungefähr 16.000 Lampen um so eher zu kommen,
+als das in Betracht kommende Gebiet in ausserordentlich starker
+Entwickelung begriffen ist und einige der zu versorgenden Ge­
+meinden, wie Oelsnitz und Aue, sogar eine ganz aussergewöhn-
+liclie Zunahme ihrer Einwohnerzahl zeigen. Mit der Stadt Apolda
+i. Thür, wurde ein Vertrag wegen Uebernahme und Weiter­
+betrieb der bisherigen Gasanstalt und der Errichtung eines
+Elektricitätswerkes daselbst abgeschlossen. Die Concessionsdauer
+für Gasanstalt und Elektricitätswerk, deren Betriebe vereinigt
+werden sollen, ist auf 50 Jahre festgesetzt. Die Gasanstalt hat
+bisher sehr gute Erträgnisse gebracht und war in den letzten drei
+Jahren im Stande, eine Dividende von 8, 8 und 10% auszu-
+schiitten. —AVegen einer ganzen Reihe anderer Unternehmungen sind
+Verhandlungen zur Zeit noch im Gange. ■— Der Gesammtüberschuss
+nach Abzug der Verwaltungskosten von 53.824 Mk. (i. V. 29.176 Mk.)
+beträgt 281.849 Mk. (i. V. 26.875 Mk.). Zu Abschreibungen werden
+verwendet 4126 Mk. (i. V. 2060 Mk.). Dem Reservefond werden
+13.626 Mk. (i. V. 1241 Mk.) überwiesen. Die Actionäre erhalten,
+wie bereits gemeldet, 4% Dividende mit 240.000 Mk. (i. V.
+4% pro rata gleich 16.875 Mk.). Tantiemen erfordern 1875 Mk.
+(i. V. 0). Gratificationen 2000 Mk. (i. V. 1500 Mk.). Der Rest
+von 20.222 Mk. (i. V. 5199 Mk.) wird vorgetragen.
+Elektricitäts-Actiengesellscliaft vormals Hermann Pöge
+in Chemnitz. Der Vorstand bezeichnet das Jahr 1899 als für
+die Gesellschaft günstig, da auf das voll am Erträgnis theil-
+nelnnende erhöhte Actiencapital wieder eine Dividende von 9%
+vorgeschlagen werden kann. Der Umsatz hat sich gegen das
+Vorjahr um circa 40o/ 0 vermehrt. Von grösseren Anlagen ist die
+Vergrösserung der Wechselstromcentrale Weipert i B. zu er­
+wähnen; für Rechnung eines Privatunternehmers wurde die
+complette Centrale Blankenburg erbaut. Ausserdem wurden
+auf Grund günstiger Concessionen für eigene Rechnung Central­
+anlagen in den Städten T h u m und Pause erstellt. Als be­
+sonders anerkennenswertlies Resultat der jungen Wechselstrom-
+Abtheilung ist der zur Befriedigung des St. Petersburger
+Bestellers erledigte Auftrag auf über 100 Wechselstrom-Trans­
+formatoren von 71/2—30 Kilowatts Leistungen zu betrachten.
+Für das laufende Jahr liegen Gewinn versprechende Aufträge
+in noch höherem Wertho als zu gleicher Zeit des Vorjahres vor.
+Der R e i n g e w i n n beträgt nach Abschreibungen in Höhe von
+68.257 Mk. noch 161.974 Mk., deren Verwendung in folgender
+Weise vorgeschlagen wird: 8098 Mk. zum gesetzlichen Reserve­
+fonds, 7693 Mk. Tantieme an Vorstand und Beamte, 135.000 Mk.
+zu 9% Dividende, 5632 Mk. zu Tantieme an den Aufsichtsrath,
+55.490 Mk. für neue Rechnung.
+Continentale Gesellschaft für angewandte Elektricität
+in Glarus. Unter dieser Firma hat sich mit Sitz in Glarus eine
+Actiengesellschaft gegründet. Zweck der Gesellschaft ist die Her­
+stellung, der Betrieb, der Erwerb oder die Veräusserung im
+In- und Auslande von Unternehmen oder Verfahren im
+Gebiete der Elektrotechnik oder der Elektrochemie, somit alle
+damit in Verbindung stehenden gewerblichen, kaufmännischen
+und finanziellen Geschäfte. Das Gesellschaftscapital beträgt
+1,500.000 Frcs.
+Elektricitäts- Actiengesellschaft vorm. C. Büchner,
+Wiesbaden. Die Gesellschaft erzielte im Jahre 1899 bei einem
+Aetiencapitale von 525.000 Mk. einen Bruttogewinn von 161.415 Mk.
+Nach Abzug der Kosten und der Abschreibungen, letztere mit
+6500 Mk., verbleibt ein Reingewinn von 78.904 Mk., wovon
+die Actionäre eine Dividende von 7% mit 36.750 Mk. und die
+Genussscheine 15.750 Mk. erhalten.
+Briefe an die Redaction.
+Charlottenburg, 27. April 1900.
+An die
+Redaction der „Zeitschrift für Elektrotechnik“
+in Wien.
+Auf den Artikel von Herrn Rosen berg „Gewichtsökonomie,
+bei Dynamomaschinen“ in der „Z. f. E.“ Nr. 14 Bozug nehmend,
+erlaube ich mir Folgendes zu bemerken:
+Bei Voraussetzung eines bestimmten Polschuhverhältnisses,
+einer bestimmten Induction unter dem Polschuhe und einer be­
+stimmten Anker-Amperewindungszahl ist nach Gl. la) der Ausdruck
+D
+— für ein constantes Rohvolumen des Ankers constant. Multi-
+plicirt man nun und dividirt den Ausdruck für das Ankerblech­
+volumen
+2 <X7T -R,
+7)2 1
+mit p2, so hat man
+7t lD 2 \V.T.Bi
+T\f
+20/ 9
+V' 27
+27
+c Yp)
+also wäre das Blechvolumon bei einer grösseren Polzahl grösser,
+was jedoch in Widerspruch mit der Annahme eines constanten
+Hysteresisverlustes stellt.
+Es folgt daraus, dass die obigen Annahmen gleich-
+zeitig nicht bestehen können.
+M. Omns, dipl. Ing.
+Ingenieur E. Rosenborg schickte uns hierauf die folgende
+Erwiderung:
+Die vorstehende Rechnung weist zwei Irrthümer auf, deren
+erster darin besteht, dass Herr Osnos bei seiner Rechnungs-
+Operation den Factor’ aus der Gleichung herausfallen liess,
+während der zweite durch einen Druckfehler auf Seite 167, der
+im Hefte Nr. 21 berichtigt wurde, verschuldet ist. Die Wurzel­
+grösse in der Gleichung für das Ankerblechvolumen ist, wie bei
+Ableitung derselben auf Seite 167, Zeile 5 von unten, richtig ab-
+2' 7_. 27_.
+gedruckt ist, nicht Y p' w* e es' n der folgenden Formel
+heisst.— Nach Richtigstellung dieser beiden Irrthümer muss die
+Formel in der Aufschreibungsart des Herrn Osnos heissen:
+T'(?J
+I)| 2.« 7t B,
+.1.
+P'
+■Bi
+■Vv
+Dieser Ausdruck wächst nicht mit wachsendem p, weil die
+Grösse l bei constantem Rohvolumen des Ankers der Grösse 7/2,
+beziehungsweise p2 verkehrt proportional ist. Man kann demnach
+44
+l■ P 27 ersetzen durch:
+44 10
+c.\ .v™= c.v~^= c—L
+Yp
+d. h. das Blechvolumen wird kleiner bei wachsender Polzahl.
+Im Uebrigon ist auch die Bemerkung„, was jedoch
+im Widerspruch mit der Annahme eines constanten Hysteresis­
+verlustes steht“, nicht zutreffend, da selbst ein wirklich grösseres
+Ankerblechvolumen mit der Annahme eines constanten Hysteresis-
+verlustes pro Cubikcentimeter des Ankereisens (Seite 167,
+Zeile 12 von unten) nichts zu tlmn hätte.
+Schluss der Redäction: 22. Mai 1900.
+Verantwortlicher Redacteur: l)r. J. Sahulka.— Selbstverlag des Elektrotechnischen Vereines.
+Commissionsverlag bei Spielhag en& Schur ich, Wien.— Alleinige Inseraten-Aufnahme bei Haasenstein& Vogler (Otto Maass), Wien und Prag,
+Druck von ß. Spies& Co., Wien.
+
