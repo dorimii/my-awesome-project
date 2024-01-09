@@ -51,7 +51,7 @@ responses = []
 for chunk in chunks:
     combined_input = chunk + "\n\n" + user_prompt
     response = llm.invoke(combined_input)
-    responses.append(response)
+    responses.append(str(response))
     print(response)
 
 combined_responses = ''.join(responses)
@@ -59,7 +59,8 @@ combined_responses = ''.join(responses)
 combined_input = combined_responses + "\n\n" + user_prompt
 
 # Get the response from the language model
-#response = llm.invoke(combined_responses)
+response = llm.invoke(combined_input)
 
 # Print the response
-#print(response)
+print("SUMMARY:\n")
+print(response)
