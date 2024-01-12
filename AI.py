@@ -1,24 +1,21 @@
 import os
-# Update the import to the non-deprecated class
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# Get the OpenAI API key from the environment variable
 key = os.environ.get("OPENAI_API_KEY")
 
 # Initialize the OpenAI model
 llm = ChatOpenAI(temperature=0.9, openai_api_key=key, model_name="gpt-3.5-turbo-0613")
+text_file_path = input("Enter the path of your text file: ")
+user_prompt = input("Enter your prompt: ")
 
-# Function to read text from a local file
+
 def read_text_from_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read()
 
-text_file_path = input("Enter the path of your text file: ")
-user_prompt = input("Enter your prompt: ")
 
 def split_text_into_chunks(text, chunk_size):
     """Splits the text into smaller chunks each of roughly chunk_size characters.
@@ -30,6 +27,7 @@ def split_text_into_chunks(text, chunk_size):
     Returns:
     list: A list of text chunks.
     """
+
     chunks = []
     while text:
         # Take the first `chunk_size` characters from the text
@@ -43,9 +41,10 @@ def split_text_into_chunks(text, chunk_size):
 
     return chunks
 
+
 # Usage
 text = read_text_from_file(text_file_path)
-chunks = split_text_into_chunks(text, 4000)  # Adjust chunk_size as needed
+chunks = split_text_into_chunks(text, 4000)
 
 responses = []
 for chunk in chunks:
