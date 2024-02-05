@@ -5,8 +5,8 @@
 import os
 import re
 
-source_directory = 'ANNO Raw/Zeitungen'
-destination_directory = 'ANNO Cleaned/Zeitungen'
+source_directory = 'ANNO Raw/Zeitschriften'
+destination_directory = 'ANNO Cleaned/Zeitschriften'
 
 
 def clean_text(text):
